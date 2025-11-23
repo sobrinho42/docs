@@ -16,9 +16,7 @@
           {
             "group": "Introdução",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
