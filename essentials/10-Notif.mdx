@@ -1,0 +1,117 @@
+---
+title: 'Notificações'
+description: 'Aprenda a ler os alertas: entradas, aumentos, reduções e saídas.'
+---
+
+O PolyTracker Bot envia 4 tipos distintos de notificação. Cada um conta uma parte da história da operação.
+
+1.  🆕  **Nova Posição** (Entrada)
+2.  📈 ** Posição Atualizada - Compra** (Aumento da posição)
+3.  📉 ** Posição Atualizada - Venda** (Redução parcial)
+4.  ✅  **Posição Encerrada** (Saída total)
+
+---
+
+## O Básico: O que todo alerta mostra
+
+Independente do tipo, toda notificação traz o "DNA" da operação:
+
+<Card title="Dados Base" icon="fingerprint" color="#5D6B81">
+  * **Carteira:** O nome/apelido do trader que você está seguindo.
+  * **Mercado:** O link clicável para a pergunta no Polymarket.
+  * **Lado:** Se a aposta é no **YES** ou **NO**.
+  * **Quantidade:** Quantos shares/dólares foram movimentados agora.
+</Card>
+
+<Frame caption="Exemplo padrão: Carteira, Mercado e Lado identificados">
+  <img src="/images/notification-base-example.png" alt="Exemplo de Notificação Base" />
+</Frame>
+
+---
+
+## 1. Nova Posição (Entrada)
+
+Aparece quando o trader entra em um mercado onde ele estava zerado. É o início da convicção.
+
+* **O que significa:** "O Trader X acabou de abrir uma aposta aqui."
+* **Dados extras:** Preço médio da entrada e Valor Total investido.
+
+<Frame caption="Alerta de Nova Posição: O início do trade">
+  <img src="/images/notification-new-position.png" alt="Nova Posição" />
+</Frame>
+
+---
+
+## 2. Posição Atualizada - Compra (Aumento)
+
+Aparece quando o trader já tinha uma posição e decide **comprar mais**. Isso geralmente indica alta convicção ou defesa de preço médio.
+
+O bot divide a informação em dois blocos para clareza:
+
+<CardGroup cols={2}>
+  <Card title="A Compra de Agora" icon="cart-plus" color="#10b981">
+    * Preço pago nesta compra específica.
+    * Valor em dólares adicionado agora.
+  </Card>
+  <Card title="A Posição Total" icon="sack-dollar" color="#3b82f6">
+    * **Novo Preço Médio Geral.**
+    * Novo valor total acumulado no mercado.
+  </Card>
+</CardGroup>
+
+<Frame caption="Alerta de Aumento: Detalhes da compra vs. Total atualizado">
+  <img src="/images/notification-update-buy.png" alt="Aumento de Posição" />
+</Frame>
+
+---
+
+## 3. Posição Atualizada - Venda (Redução)
+
+Aparece quando o trader vende apenas **uma parte** das ações. Geralmente indica realização de lucros parciais (colocar dinheiro no bolso) ou redução de risco.
+
+<CardGroup cols={2}>
+  <Card title="A Venda Realizada" icon="money-bill-transfer" color="#f59e0b">
+    * Quantidade vendida agora.
+    * Preço médio de saída.
+    * Valor recuperado (Cash out).
+  </Card>
+  <Card title="O que sobrou" icon="chart-pie" color="#64748b">
+    * Novo preço médio da posição restante.
+    * Valor que ainda continua em jogo.
+  </Card>
+</CardGroup>
+
+<Frame caption="Alerta de Redução: Venda parcial vs. Saldo restante">
+  <img src="/images/notification-update-sell.png" alt="Redução de Posição" />
+</Frame>
+
+---
+
+## 4. Posição Encerrada (Saída)
+
+Aparece quando o trader vende **100%** das ações ou o mercado é resolvido. É o fim da linha para aquela operação.
+
+* **O Foco:** Resultado Financeiro.
+* **Métrica Principal:** **PnL (Profit and Loss)**. O bot destaca claramente se o trader saiu com Lucro ou Prejuízo total naquela operação.
+
+<Frame caption="Alerta de Encerramento: Destaque para o PnL final">
+  <img src="/images/notification-closed.png" alt="Posição Encerrada" />
+</Frame>
+
+---
+
+## Resumo do Ciclo
+
+Ao acompanhar essas notificações em sequência, você tem o filme completo:
+
+<Steps>
+  <Step title="Entrada" icon="star">
+    Alerta de **Nova Posição**. Você analisa e decide se entra junto.
+  </Step>
+  <Step title="Gestão" icon="sliders">
+    Alertas de **Atualização**. Você vê se ele está aumentando a mão (confiança) ou reduzindo (proteção).
+  </Step>
+  <Step title="Saída" icon="flag-checkered">
+    Alerta de **Posição Encerrada**. Hora de apurar o lucro e partir para a próxima.
+  </Step>
+</Steps>
