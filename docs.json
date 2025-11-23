@@ -25,7 +25,8 @@
             "group": "Polymarket",
             "pages": [
               "essentials/settings",
-              "essentials/navigation"
+              "essentials/navigation",
+              "essentials/USDC"
             ]
           },
           {
