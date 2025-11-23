@@ -33,9 +33,9 @@
             ]
           },
           {
-            "group": "Writing content",
+            "group": "PolyTracker Bot",
             "pages": [
-              "essentials/markdown",
+              "essentials/7-Bot",
               "essentials/code",
               "essentials/images",
               "essentials/reusable-snippets"
