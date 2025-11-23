@@ -1,87 +1,96 @@
----
-title: 'Navigation'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: 'Como criar sua conta'
+description: 'Passo a passo seguro para iniciar sua jornada no Polymarket.'
 ---
 
-The navigation menu is the list of links on every website.
+Antes de operar, você precisa ter uma conta ativa no Polymarket. O processo é simples, mas vale seguir cada passo com atenção para garantir a segurança dos seus dados.
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
+  title="Como criar conta no Polymarket"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ borderRadius: '8px', marginBottom: '20px' }}
+></iframe>
 
-## Navigation syntax
+---
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+## Passo a Passo
 
-<CodeGroup>
+<Steps>
+  <Step title="Acesse o site oficial">
+    Abra o navegador (de preferência no computador) e digite o endereço oficial.
 
-```json Regular Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": ["quickstart"]
-        }
-      ]
-    }
-  ]
-}
-```
+    <Warning>
+      **Segurança em primeiro lugar:**
+      Confirme se o endereço começa com `https://` e se o cadeado de conexão segura está visível. Existem sites falsos (phishing), certifique-se de estar em **polymarket.com**.
+    </Warning>
 
-```json Nested Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "quickstart",
-            {
-              "group": "Nested Reference Pages",
-              "pages": ["nested-reference-page"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
+    <Frame caption="Barra de endereço correta com cadeado de segurança.">
+      <img src="/images/setup-url-check.png" alt="Verificação de URL segura" />
+    </Frame>
+  </Step>
 
-</CodeGroup>
+  <Step title="Inicie o Cadastro">
+    Na página inicial, localize o botão **"Sign Up"** ou **"Get Started"** (geralmente localizado no canto superior direito) e clique nele.
+  </Step>
 
-## Folders
+  <Step title="Escolha o método de acesso">
+    O Polymarket oferece duas formas principais de entrada. Escolha a que melhor se adapta ao seu perfil:
 
-Simply put your MDX files in folders and update the paths in `docs.json`.
+    <CardGroup cols={2}>
+      <Card title="E-mail / Google" icon="google" color="#EA4335">
+        **Recomendado para Iniciantes**
+        * Login familiar via Google ou Link Mágico no E-mail.
+        * A plataforma cria e gerencia a carteira (wallet) para você.
+        * Recuperação de conta mais simples.
+      </Card>
+      <Card title="Crypto Wallet" icon="wallet" color="#F59E0B">
+        **Para Usuários Avançados**
+        * Conecte sua MetaMask, Coinbase ou WalletConnect.
+        * Autenticação via assinatura de mensagem (sem senha).
+        * Controle total das chaves privadas (Self-custody).
+      </Card>
+    </CardGroup>
+  </Step>
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+  <Step title="Finalize a Conexão">
+    Dependendo da sua escolha anterior, siga o fluxo:
 
-<Warning>
+    **Opção A: Google / E-mail**
+    1. Selecione "Continue with Google" ou digite seu e-mail.
+    2. Se for e-mail, clique no link de confirmação enviado para sua caixa de entrada.
+    3. Se for Google, apenas autorize o pop-up padrão.
 
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
+    **Opção B: Carteira Cripto**
+    1. Selecione sua carteira (ex: MetaMask).
+    2. Um pop-up da extensão abrirá pedindo uma **Assinatura**.
+    3. Assine a mensagem (Isso não é uma transação e não tem custo).
 
-</Warning>
+    <Frame caption="Tela de seleção de método de login.">
+      <img src="/images/setup-signup-options.png" alt="Opções de Login" />
+    </Frame>
+  </Step>
 
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
+  <Step title="Verifique o Acesso">
+    Após o login, você será redirecionado para a página inicial.
+    * Confira se aparece seu ícone de perfil no canto superior direito.
+    * Ao clicar nele, você deve ver seu saldo ($0.00 USDC) e seu endereço de carteira (começando com `0x...`).
 
-## Hidden pages
+    <Frame caption="Dashboard logado mostrando perfil e saldo zerado.">
+      <img src="/images/setup-dashboard-logged.png" alt="Dashboard Logado" />
+    </Frame>
+  </Step>
+</Steps>
 
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+---
+
+## Próximo Passo
+
+Com a conta criada e validada, seu terminal está pronto. Agora precisamos abastecê-lo com capital para operar.
+
+<Card title="Como depositar USDC" icon="money-bill-transfer" href="/setup/funding-usdc-polygon">
+  Aprenda a enviar fundos da sua corretora para o Polymarket usando a rede Polygon.
+</Card>
