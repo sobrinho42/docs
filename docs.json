@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "PolyTracker",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2E75FF",
+    "light": "#5C94FF",
+    "dark": "#1D4ED8"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -16,36 +16,36 @@
           {
             "group": "Introdução",
             "pages": [
-              "Intro/Bemvindo"
+              "index"
             ]
           },
           {
             "group": "Polymarket",
             "pages": [
-              "Polymarket/Polymarket",
-              "Polymarket/Conta",
-              "Polymarket/USDC",
-              "Polymarket/Odds",
-              "Polymarket/Primeira",
-              "Polymarket/Sacar"
+              "essentials/1-Poly",
+              "essentials/2-Conta",
+              "essentials/3-USDC",
+              "essentials/4-Odds",
+              "essentials/5-Primeira",
+              "essentials/6-Sacar"
             ]
           },
           {
             "group": "PolyTracker Bot",
             "pages": [
-              "Bot/Bot",
-              "Bot/Conectar",
-              "Bot/Comandos",
-              "Bot/Notif",
-              "Bot/Copiar",
-              "Bot/Estrategia"
+              "essentials/7-Bot",
+              "essentials/8-Conectar",
+              "essentials/9-Comandos",
+              "essentials/10-Notif",
+              "essentials/11-Copiar",
+              "essentials/12-Estrategia"
             ]
           },
           {
             "group": "PolyTracker Radar",
             "pages": [
-              "Radar/13-Radar",
-              "Radar/14-Usar"
+              "ai-tools/13-Radar",
+              "ai-tools/14-Usar"
             ]
           }
         ]
@@ -53,7 +53,7 @@
     ]
   },
   "logo": {
-    "light": "/logo/learn_.svg",
+    "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
