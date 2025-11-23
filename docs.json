@@ -14,7 +14,7 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Primeiros Passos",
+            "group": "Introdução",
             "pages": [
               "index",
               "quickstart",
@@ -22,7 +22,7 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Polymarket",
             "pages": [
               "essentials/settings",
               "essentials/navigation"
