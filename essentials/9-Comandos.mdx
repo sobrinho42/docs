@@ -1,0 +1,106 @@
+---
+title: 'Comandos do Bot'
+description: 'Domine as funcionalidades essenciais: /start, /seguir, /lista e /help.'
+---
+
+O PolyTracker Bot funciona a partir de uma interface de chat simples e direta no Telegram. Tudo começa pelo menu principal, mas você tem total controle através dos comandos de texto.
+
+---
+
+## `/start` — Iniciar o Bot
+
+Este é o ponto de partida. Se o bot travar ou se você quiser limpar a tela e ver o menu principal novamente, basta enviar este comando.
+
+**O que ele faz:**
+* Abre o menu inicial.
+* Exibe os botões de ação rápida.
+* Confirma a conexão com sua conta PolyTracker.
+
+<Frame caption="Menu inicial após o comando /start">
+  <img src="/images/bot-start-menu.png" alt="Menu Start" />
+</Frame>
+
+---
+
+## `/seguir` — Adicionar Carteira
+
+É aqui que você expande seu radar. Use este comando para cadastrar um novo trader para monitoramento.
+
+<Steps>
+  <Step title="Envie o comando">
+    Digite `/seguir` no chat e envie.
+  </Step>
+  <Step title="Informe o alvo">
+    O bot pedirá a carteira. Você pode enviar:
+    * O **Endereço** (Ex: `0x123...`)
+    * O **Usuário** Polymarket (Ex: `@TrumpWhale`, quando disponível).
+  </Step>
+  <Step title="Defina um Apelido (Nome)">
+    Para facilitar sua organização, o bot pedirá um nome.
+    * Ex: *"Baleia Eleições"*, *"Trader Esportes"*, *"Carteira X"*.
+  </Step>
+  <Step title="Confirmação">
+    Pronto. A partir de agora, qualquer movimento dessa carteira gera um alerta para você.
+  </Step>
+</Steps>
+
+<Frame caption="Fluxo de cadastro: Comando > Endereço > Nome definido">
+  <img src="/images/bot-follow-flow.png" alt="Fluxo Seguir" />
+</Frame>
+
+---
+
+## `/lista` — Gerenciar Carteiras
+
+O comando `/lista` é o seu painel de controle. Ele exibe todas as carteiras que você monitora e oferece botões para análise profunda de cada uma.
+
+<Frame caption="Lista de carteiras com botões de ação">
+  <img src="/images/bot-list-view.png" alt="Comando Lista" />
+</Frame>
+
+### Botões de Ação
+
+Abaixo de cada carteira listada, você encontrará três botões interativos:
+
+<CardGroup cols={1}>
+  <Card title="👤 Perfil (Polymarket)" icon="user">
+    Ao clicar, você abre o link direto da carteira no site do Polymarket.
+    * **O que ver:** Patrimônio total, histórico de PnL (Lucro/Prejuízo) e overview dos mercados operados.
+    
+    <Frame caption="Perfil da carteira aberto no navegador">
+        <img src="/images/polymarket-profile-view.png" alt="Perfil Polymarket" />
+    </Frame>
+  </Card>
+
+  <Card title="📊 Posições Abertas" icon="chart-simple">
+    Este é o relatório mais poderoso. O bot gera um resumo instantâneo com:
+    * **Market:** Link direto clicável para o mercado.
+    * **Lado:** Se ele comprou YES ou NO.
+    * **Shares:** Quantidade de ações.
+    * **Preço:** Preço Médio de entrada vs. Preço Atual.
+    * **PnL:** Se a posição está no lucro ou prejuízo agora.
+
+    <Frame caption="Relatório detalhado de posições abertas">
+        <img src="/images/bot-open-positions.png" alt="Posições Abertas" />
+    </Frame>
+  </Card>
+
+  <Card title="❌ Parar de Seguir" icon="trash">
+    Remove a carteira da sua lista imediatamente. Você deixará de receber notificações sobre ela.
+
+    <Frame caption="Confirmação de remoção da carteira">
+        <img src="/images/bot-unfollow-confirm.png" alt="Parar de Seguir" />
+    </Frame>
+  </Card>
+</CardGroup>
+
+---
+
+## `/help` — Ajuda
+
+Esqueceu algum comando? Digite `/help`.
+O bot exibirá um resumo rápido de todas as funcionalidades e links para o suporte, caso precise de ajuda humana.
+
+<Frame caption="Tela de ajuda com resumo dos comandos">
+  <img src="/images/bot-help-screen.png" alt="Tela Help" />
+</Frame>
