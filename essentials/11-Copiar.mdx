@@ -1,0 +1,107 @@
+---
+title: 'Como copiar uma operação'
+description: 'Do alerta à execução: transformando notificação em lucro.'
+---
+
+Aqui vamos mostrar, de forma prática, como transformar uma notificação do PolyTracker Bot em uma operação real no Polymarket.
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
+  title="Passo a Passo: Replicando uma Operação"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  style={{ borderRadius: '8px', marginBottom: '20px' }}
+></iframe>
+
+---
+
+## 1. O Gatilho (A Notificação)
+
+Este fluxo se aplica principalmente quando você recebe alertas de **Entrada** ou **Aumento de Mão**:
+* 🟢 **Nova posição**
+* ⬆️ **Posição atualizada – compra**
+
+<Steps>
+  <Step title="Leitura do Alerta">
+    Ao receber a mensagem no Telegram, foque em 3 pontos:
+    1. **Mercado:** Qual é a pergunta?
+    2. **Lado:** Ele comprou YES ou NO?
+    3. **Convicção:** Qual a **% do patrimônio** usada?
+
+    <Frame caption="Destaque para a % do patrimônio na notificação">
+      <img src="/images/notification-highlight-percent.png" alt="Leitura da Notificação" />
+    </Frame>
+  </Step>
+
+  <Step title="Acesso Rápido">
+    Se a operação fizer sentido para sua estratégia, clique no **Link do Market** (texto azul) dentro da própria notificação.
+    O Polymarket abrirá direto na página correta.
+
+    <Frame caption="Tela do mercado aberta via link">
+      <img src="/images/polymarket-market-screen.png" alt="Tela do Mercado" />
+    </Frame>
+  </Step>
+
+  <Step title="Conferência de Preço">
+    Antes de comprar, compare o preço atual com o preço que o trader pagou (informado no bot).
+    * **Preço igual ou menor:** Ótima oportunidade.
+    * **Preço muito maior:** Cuidado, o retorno potencial já diminuiu.
+  </Step>
+
+  <Step title="Defina o Tamanho (A Regra de Ouro)">
+    Aqui está o segredo dos profissionais. **Não copie o valor em Dólares. Copie a Proporção.**
+
+    <Info>
+      **Cópia Proporcional:**
+      Se a "Baleia" tem $1.000.000 e colocou $30.000, ela arriscou **3%**.
+      Se você tem $1.000, você deve colocar **$30 (3%)**.
+
+      Respeite o gerenciamento de risco da carteira que você segue.
+    </Info>
+
+    No painel de compra, digite o valor em USDC calculado.
+
+    <Frame caption="Preenchendo o valor da ordem">
+      <img src="/images/polymarket-buy-panel.png" alt="Painel de Compra" />
+    </Frame>
+  </Step>
+
+  <Step title="Execução">
+    1. Selecione o mesmo lado (**YES** ou **NO**).
+    2. Revise o valor e o preço estimado.
+    3. Clique em **Buy / Place Order**.
+
+    <Frame caption="Confirmação da ordem executada">
+      <img src="/images/polymarket-order-confirmed.png" alt="Ordem Confirmada" />
+    </Frame>
+  </Step>
+</Steps>
+
+---
+
+## 2. A Saída (Hora de Vender)
+
+Você entrou junto, agora pode sair junto. Fique atento a notificações de:
+* ⬇️ **Posição atualizada – venda** (Redução parcial)
+* 🏁 **Posição encerrada** (Vendeu tudo)
+
+### Como proceder:
+
+1.  Ao receber o alerta de venda, clique no link do market novamente.
+2.  Verifique sua posição atual (Seu PnL).
+3.  **Espelhe a ação:**
+    * Se ele vendeu tudo: Venda 100% da sua posição.
+    * Se ele reduziu a mão: Venda uma parte proporcional para garantir lucro.
+
+<Frame caption="Painel de Venda (Sell) no Polymarket">
+  <img src="/images/polymarket-sell-panel.png" alt="Painel de Venda" />
+</Frame>
+
+---
+
+## Conclusão
+
+Seguindo este roteiro, você transforma uma notificação do Telegram em uma operação estruturada, mantendo a mesma lógica e proporção de risco dos maiores investidores do mundo.
