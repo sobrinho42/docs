@@ -1,35 +1,48 @@
 ---
-title: 'Code blocks'
-description: 'Display inline code and code blocks'
-icon: 'code'
+title: 'Conectando ao Telegram'
+description: 'Vincule sua conta do PolyTracker ao bot para começar a receber alertas.'
 ---
 
-## Inline code
+A conexão do bot é simples e segura. Ela funciona através de um sistema de token único que vincula sua assinatura do site ao seu usuário do Telegram.
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+---
 
-```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-```
+## Passo a Passo da Conexão
 
-## Code blocks
+<Steps>
+  <Step title="Acesse a área do Bot">
+    Faça login na sua conta no site **PolyTracker**.
+    No menu principal, navegue até a aba **PolyTracker Bot**.
 
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
+    Nesta tela, você encontrará duas informações essenciais:
+    1. Um botão para **Abrir o Bot no Telegram**.
+    2. O seu **Código de Vinculação** (Token) exclusivo.
 
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
+    <Frame caption="Dashboard do site mostrando o botão e o código de acesso">
+      <img src="/images/site-bot-dashboard.png" alt="Painel do Bot no Site" />
+    </Frame>
+  </Step>
 
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-````
+  <Step title="Inicie o Bot">
+    Clique no botão do site ou busque pelo usuário do bot no Telegram.
+    Ao abrir a conversa, clique no botão **Start / Iniciar** na parte inferior da tela.
+
+    <Frame caption="Tela inicial do Bot no Telegram">
+      <img src="/images/telegram-start-screen.png" alt="Bot Start" />
+    </Frame>
+  </Step>
+
+  <Step title="Insira seu Código">
+    O bot solicitará sua validação.
+    1. Copie o código que está na tela do site do PolyTracker.
+    2. Cole o código na conversa do Telegram e envie.
+
+    <Frame caption="Enviando o código para vincular a conta">
+      <img src="/images/telegram-paste-code.png" alt="Envio do Token" />
+    </Frame>
+
+    <Check>
+      **Sucesso!** O bot responderá confirmando que sua conta foi vinculada. A partir de agora, seu terminal está ativo.
+    </Check>
+  </Step>
+</Steps>
