@@ -16,18 +16,18 @@
           {
             "group": "Introdução",
             "pages": [
-              "index"
+              "Intro/Bemvindo"
             ]
           },
           {
             "group": "Polymarket",
             "pages": [
-              "essentials/1-Poly",
-              "essentials/2-Conta",
-              "essentials/3-USDC",
-              "essentials/4-Odds",
-              "essentials/5-Primeira",
-              "essentials/6-Sacar"
+              "Polymarket/Polymarket",
+              "Polymarket/Conta",
+              "Polymarket/USDC",
+              "Polymarket/Odds",
+              "Polymarket/Primeira",
+              "Polymarket/Sacar"
             ]
           },
           {
