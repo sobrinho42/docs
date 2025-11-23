@@ -33,19 +33,19 @@
           {
             "group": "PolyTracker Bot",
             "pages": [
-              "essentials/7-Bot",
-              "essentials/8-Conectar",
-              "essentials/9-Comandos",
-              "essentials/10-Notif",
-              "essentials/11-Copiar",
-              "essentials/12-Estrategia"
+              "Bot/Bot",
+              "Bot/Conectar",
+              "Bot/Comandos",
+              "Bot/Notif",
+              "Bot/Copiar",
+              "Bot/Estrategia"
             ]
           },
           {
             "group": "PolyTracker Radar",
             "pages": [
-              "ai-tools/13-Radar",
-              "ai-tools/14-Usar"
+              "Radar/13-Radar",
+              "Radar/14-Usar"
             ]
           }
         ]
