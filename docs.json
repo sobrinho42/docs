@@ -16,36 +16,36 @@
           {
             "group": "Introdução",
             "pages": [
-              "index"
+              "Intro/Bem-vindo"
             ]
           },
           {
             "group": "Polymarket",
             "pages": [
-              "essentials/1-Poly",
-              "essentials/2-Conta",
-              "essentials/3-USDC",
-              "essentials/4-Odds",
-              "essentials/5-Primeira",
-              "essentials/6-Sacar"
+              "Polymarket/Polymarket",
+              "Polymarket/Conta",
+              "Polymarket/USDC",
+              "Polymarket/Odds",
+              "Polymarket/Primeira",
+              "Polymarket/Sacar"
             ]
           },
           {
             "group": "PolyTracker Bot",
             "pages": [
-              "essentials/7-Bot",
-              "essentials/8-Conectar",
-              "essentials/9-Comandos",
-              "essentials/10-Notif",
-              "essentials/11-Copiar",
-              "essentials/12-Estrategia"
+              "Bot/Bot",
+              "Bot/Conectar",
+              "Bot/Comandos",
+              "Bot/Notif",
+              "Bot/Copiar",
+              "Bot/Estrategia"
             ]
           },
           {
             "group": "PolyTracker Radar",
             "pages": [
-              "ai-tools/13-Radar",
-              "ai-tools/14-Usar"
+              "Radar/13-Radar",
+              "Radar/14-Usar"
             ]
           }
         ]
@@ -53,7 +53,7 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
+    "light": "/logo/learn_.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
