@@ -1,21 +1,18 @@
 ---
 title: 'Como interpretar o Order Book'
-description: 'Entenda o que está por trás do preço: ofertas de compra, venda, profundidade e impacto do tamanho da sua ordem.'
+description: 'Veja o que está por trás do preço: quem está comprando, quem está vendendo e como isso afeta sua execução.'
 ---
 
-Até aqui, você já aprendeu:
+Até aqui, você já sabe:
 
-1. Como criar sua conta  
-2. Como depositar USDC  
-3. Como interpretar as odds  
-4. Como fazer sua primeira operação
+1. Criar conta  
+2. Depositar USDC  
+3. Ler as odds (preço = probabilidade)  
+4. Fazer sua primeira operação  
 
-Agora vamos dar um passo além: entender **o que está acontecendo “por baixo” do preço**, no **Order Book**.
+Agora falta entender **o que sustenta esses preços**: o **Order Book**.
 
-A ideia é:
-
-1. Assistir a um trecho curto do vídeo para ver o conceito em ação.  
-2. Ler a explicação prática e aplicar isso nos seus mercados.
+Assita o trecho do vídeo separado e leia o material complementar para consolidação.
 
 <iframe
   width="100%"
@@ -25,168 +22,111 @@ A ideia é:
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
-  style={{ borderRadius: '8px', marginBottom: '20px' }}
-></iframe>
+  style={{ borderRadius:'8px', marginBottom:'20px' }}
+/>
 
 ---
 
 ## 1. O que é o Order Book?
 
-O **Order Book** é uma lista organizada de:
+O **Order Book** é uma tabela que mostra, em tempo real:
 
-- **Ordens de compra (bids)** → pessoas dispostas a comprar, com preço e tamanho  
-- **Ordens de venda (asks)** → pessoas dispostas a vender, com preço e tamanho  
+- Quem quer **comprar** (bids) → preço e tamanho  
+- Quem quer **vender** (asks) → preço e tamanho  
 
-Ele mostra:
+É ele que responde:
 
-- Qual é o **melhor preço** que alguém paga agora  
-- Qual é o **melhor preço** que alguém vende agora  
-- Quanto de dinheiro existe em cada nível de preço
+- Qual o melhor preço que alguém paga agora?  
+- Qual o melhor preço que alguém vende agora?  
+- Quanto dinheiro existe em cada nível de preço?
 
-<Frame caption="Exemplo de Order Book mostrando níveis de compra (bids) e venda (asks).">
-  <img src="/images/orderbook-basic.png" alt="Order Book com bids e asks" />
+<Frame caption="Exemplo de Order Book com níveis de compra (bids) e venda (asks).">
+  <img src="/images/orderbook-example.png" alt="Exemplo de Order Book" />
 </Frame>
 
-> O Order Book é, basicamente, o **mapa** de quem quer comprar e vender naquele mercado.
+> Em resumo: o Order Book é o **mapa de oferta e demanda** daquele mercado.
 
 ---
 
-## 2. Por que às vezes o preço de saída é diferente do “preço da tela”?
+## 2. Market order vs. Limit order (na prática)
 
-No vídeo, ele mostra o seguinte cenário:
+Quando você clica em **Buy** ou **Sell**, basicamente escolhe entre dois modos de execução:
 
-- Último preço/odds aparecendo em torno de **$0.31**
-- Quando clica em **Sell (vender)**, o preço disponível é **$0.28**
+<CardGroup cols={2}>
+  <Card title="Market Order" icon="bolt" color="#22c55e">
+    - Executa **agora** no melhor preço disponível.  
+    - Você aceita o preço que o mercado está oferecendo.  
+    - Útil para valores menores e quando você prioriza velocidade.
+  </Card>
 
-Isso acontece porque:
-
-- O **último negócio** pode ter sido a $0.31  
-- Mas o **melhor comprador disponível agora** (melhor bid) está oferecendo $0.28  
-
-Quando você usa uma **market order** (ordem a mercado) para sair **“agora”**, você vende para o melhor comprador disponível — que pode estar alguns centavos abaixo do último preço mostrado.
+  <Card title="Limit Order" icon="flag" color="#3b82f6">
+    - Você define o **preço máximo** que quer pagar (compra)  
+      ou o **mínimo** que aceita receber (venda).  
+    - Só executa se houver contraparte nesse preço.  
+    - Útil para ter mais controle sobre o preço médio.
+  </Card>
+</CardGroup>
 
 <Note>
-  Pense assim:  
-  **Market Order** = “quero sair agora, no melhor preço que tiver”  
-  **Limit Order** = “quero sair, mas só se for neste preço ou melhor”
+  Ordem a mercado = “quero entrar/sair **agora**”.  
+  Ordem limitada = “quero entrar/sair, mas só **nesse preço ou melhor**”.
 </Note>
 
 ---
 
-## 3. Profundidade: o tamanho da sua ordem importa
+## 3. Profundidade e impacto do tamanho da sua ordem
 
-No vídeo, ele mostra um exemplo importante:
+Além do melhor preço, o Order Book mostra **quanto** existe em cada nível.
 
-- O melhor comprador está pagando **$0.28**  
-- E esse comprador está disposto a comprar até **$34.72**  
+Isso é importante porque:
 
-Se você quiser vender **mais** do que isso, sua ordem:
+- Se sua ordem for **pequena**, ela costuma ser executada inteira no melhor preço.  
+- Se sua ordem for **maior**, ela pode “pegar” vários níveis do livro, subindo (na compra) ou descendo (na venda) a escada de preços.
 
-- Vai preencher primeiro esse nível de $0.28  
-- Depois vai descendo para os próximos compradores com preços menores ($0.27, $0.26, $0.25, …)  
-- Seu **preço médio** de saída fica mais baixo
+Esse efeito é chamado de **slippage** (deslizamento de preço):
 
-Isso é o que chamamos, na prática, de **slippage** (deslizamento de preço).
-
-<Frame caption="Exemplo de profundidade: diferentes níveis de compra com preços e tamanhos distintos.">
-  <img src="/images/orderbook-depth.png" alt="Profundidade do Order Book" />
-</Frame>
-
----
-
-## 4. Exemplo simplificado de slippage
-
-Imagine este trecho do Order Book (lado comprador):
-
-| Preço (Bid) | Tamanho disponível |
-|-------------|--------------------|
-| $0.28       | $34.72             |
-| $0.27       | $50.00             |
-| $0.25       | $100.00            |
-
-- Se você quiser vender **$30**, tudo sai a **$0.28**.  
-- Se você quiser vender **$150**, parte sai a $0.28, parte a $0.27, parte a $0.25.  
-  Resultado: seu **preço médio** de saída fica **abaixo** de $0.28.
+- Você vê um preço na tela  
+- Mas, ao executar um valor grande, o **preço médio real** da operação fica diferente  
+- Nem melhor, nem pior por definição — apenas resultado da **profundidade disponível**
 
 <Warning>
-  Antes de fazer ordens grandes, sempre olhe **quantidade disponível** nos primeiros níveis do Order Book.  
-  Não é questão de “bom” ou “ruim”, é apenas entender **qual será seu preço médio real**.
+  Antes de usar valores maiores, sempre olhe **quantidade disponível** nos 2–3 primeiros níveis de preço.  
+  Assim você evita surpresas no preço médio.
 </Warning>
 
 ---
 
-## 5. No lado da compra acontece o mesmo
+## 4. O que vale checar no Order Book
 
-O raciocínio vale também quando você **compra**:
-
-- Se você quiser comprar um valor pequeno, pega apenas o melhor preço de venda (ask) atual.  
-- Se quiser comprar um valor grande, sua ordem vai “subindo a escada” de preços, pegando vendedores mais caros.
-
-O vídeo ilustra isso:
-
-- À primeira vista, parece uma operação com retorno de **3x** se der certo.  
-- Mas, ao colocar um valor alto, o preço médio de entrada sobe (por falta de vendedores suficientes naquele preço).  
-- No fim, o retorno real fica mais próximo de **~2x**.
-
-<Note>
-  Não é que o mercado seja “ruim” — ele só tem uma certa **profundidade**.  
-  Seu preço médio depende do **tamanho da sua ordem** comparado com o que existe no livro.
-</Note>
-
----
-
-## 6. O que observar no Order Book e na liquidez
-
-Antes de entrar pesado em um mercado, vale checar três pontos:
-
-<CardGroup cols={3}>
-  <Card title="1. Spread" icon="arrows-left-right" color="#0ea5e9">
-    Diferença entre o melhor preço de compra (bid) e o melhor preço de venda (ask).  
-    Spreads menores = entradas/saídas mais eficientes.
-  </Card>
-
-  <Card title="2. Profundidade" icon="water" color="#22c55e">
-    Quanto dinheiro existe nos primeiros níveis de preço.  
-    Isso te mostra o impacto que o **tamanho da sua ordem** pode causar.
-  </Card>
-
-  <Card title="3. Volume" icon="chart-line" color="#f97316">
-    Volume negociado no mercado.  
-    Mercados com mais volume tendem a ter execução mais estável.
-  </Card>
-</CardGroup>
-
----
-
-## 7. Checklist rápido antes de clicar em Buy ou Sell
+Use este checklist rápido:
 
 <Check>
-  Verifique o **melhor bid** e o **melhor ask**.
+  Veja o **melhor bid** (comprador) e o **melhor ask** (vendedor) — isso te dá o spread do mercado.
 </Check>
 
 <Check>
-  Veja quanto existe de **tamanho** nos 2–3 primeiros níveis.
+  Observe o **tamanho** disponível nesses níveis: se você entrar/sair com seu valor, ele cabe ali?
 </Check>
 
 <Check>
-  Pergunte-se: *“Se eu entrar/sair com este valor, meu preço médio vai ficar próximo do preço atual?”*
+  Em entradas/saídas maiores, considere usar **limit order** para controlar melhor seu preço médio.
 </Check>
 
 <Check>
-  Se estiver operando um valor maior, considere usar **limit orders** para controlar melhor seu preço de execução.
+  Combine o Order Book com o **volume do mercado**: mercados mais movimentados tendem a ter execução mais estável.
 </Check>
 
 ---
 
 ## Próximo passo
 
-Agora você já entende:
+Agora você entende:
 
-- Como o Order Book organiza compradores e vendedores  
-- Por que ordens grandes podem ter preço médio diferente do “preço da tela”  
-- Como avaliar spread, profundidade e volume de forma objetiva
+- O que é o Order Book  
+- A diferença entre market e limit order  
+- Como o tamanho da sua ordem interage com a profundidade do mercado  
 
-O próximo módulo fecha o ciclo básico: **como sacar seus lucros de volta para você**.
+O próximo módulo vai fechar o ciclo básico: **como sacar seus lucros de volta para você**.
 
 <Card title="Como sacar seus lucros" icon="money-bill-transfer" href="/setup/withdrawing-profits">
   Veja como retirar seus ganhos do Polymarket para sua conta bancária ou corretora.
