@@ -3,14 +3,14 @@ title: 'Sua Primeira Operação'
 description: 'O fluxo completo: da escolha do mercado até a confirmação da ordem.'
 ---
 
-Com a conta criada, saldo em USDC e o entendimento básico das odds, você está pronto.
-A ideia aqui é mostrar o fluxo prático: **Escolher Mercado → Definir Lado (Sim/Não) → Confirmar.**
+Com a conta criada, saldo em USDC e o entendimento básico das odds, você já pode fazer sua primeira operação.  
+Aqui vamos mostrar o fluxo prático usando como exemplo o mercado **“2026 FIFA World Cup Winner”**.
 
 <iframe
   width="100%"
   height="400"
-  src="https://www.youtube.com/embed/1lFgkHLqo28"
-  title="Como operar no Polymarket"
+  src="https://www.youtube.com/embed/f0fLy5DhcYY?start=490&end=557&controls=0&modestbranding=1&rel=0&showinfo=0"
+  title="Sua primeira operação no Polymarket"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
@@ -19,78 +19,103 @@ A ideia aqui é mostrar o fluxo prático: **Escolher Mercado → Definir Lado (S
 
 ---
 
-## Passo a Passo da Operação
+## Passo a passo da operação
 
 <Steps>
   <Step title="Acesse a aba Markets">
     Estando logado, vá até a página principal. Você verá uma lista de eventos divididos por categorias (Política, Cripto, Esportes, etc.).
 
-    <Frame caption="Lista de mercados mostrando preços de YES/NO">
-      <img src="/images/markets-list-view.png" alt="Lista de Mercados" />
+    <Frame caption="Lista de mercados com o evento “2026 FIFA World Cup Winner” em destaque.">
+      <img src="/images/markets-list-view.png" alt="Lista de mercados com 2026 FIFA World Cup Winner" />
     </Frame>
   </Step>
 
-  <Step title="Escolha um Mercado Simples">
-    Para a primeira operação, recomendamos mercados binários (Sim/Não) com alta liquidez.
-    * Ex: *"Trump será eleito?"* ou *"Time X vai vencer?"*
-    
-    Clique no título para abrir a visão detalhada.
-    <Frame caption="Página detalhada do mercado">
-      <img src="/images/market-detail-view.png" alt="Detalhe do Mercado" />
+  <Step title="Abra o mercado 2026 FIFA World Cup Winner">
+    Procure por **“2026 FIFA World Cup Winner”** e clique no título.  
+    Dentro desse mercado, você verá uma lista de seleções (Brasil, Argentina, França, etc.), cada uma com seu próprio preço.
+
+    <Frame caption="Visão detalhada do mercado 2026 FIFA World Cup Winner com as seleções e respectivos preços.">
+      <img src="/images/market-detail-view.png" alt="Detalhe do mercado 2026 FIFA World Cup Winner" />
     </Frame>
   </Step>
 
-  <Step title="Analise e Escolha o Lado">
-    Você verá os botões de **YES** e **NO** com seus respectivos preços.
-    * **$0.62 (YES):** O mercado diz que há 62% de chance.
-    * **$0.38 (NO):** O mercado diz que há 38% de chance.
+  <Step title="Escolha sua seleção">
+    Cada seleção funciona como um “YES” separado:  
+    - Exemplo: **Brazil @ $0.18** → mercado atribuindo ~18% de chance de o Brasil ser campeão.  
+    - Exemplo: **Argentina @ $0.22** → mercado atribuindo ~22% de chance para a Argentina.
 
-    Pergunte-se: *"A chance real é maior que isso?"*. Clique na opção desejada.
+    Escolha uma seleção que faça sentido para você e clique sobre ela para abrir o painel de ordem.
   </Step>
 
-  <Step title="Defina o Investimento">
-    No painel de ordem (Order Slip), digite o valor em USDC que deseja investir.
+  <Step title="Defina o investimento">
+    No painel de ordem (Order Slip), você define **quanto quer investir em USDC**.
+
+    O sistema mostra automaticamente:
+    - Quantas **shares** você está comprando.
+    - O **retorno potencial** se aquela seleção for campeã (cada share paga $1.00 se acertar).
 
     <Tip>
-      **Dica PolyTracker:**
-      Caso esteja seguindo uma call do nosso Bot, lembre-se de calcular a **% do seu patrimônio** adequada para a operação. Nunca coloque todo o saldo em um único mercado.
+      **Dica PolyTracker:**  
+      Pense sempre em **porcentagem do seu capital**, não em valor absoluto.  
+      Para a primeira operação, use um valor pequeno apenas para se familiarizar com o fluxo.
     </Tip>
 
-    O sistema calculará automaticamente quantas **Shares** você vai levar e qual seu **Lucro Potencial**.
-
-    <Frame caption="Painel de ordem preenchido com valor e retorno estimado">
-      <img src="/images/order-slip-filled.png" alt="Painel de Ordem" />
+    <Frame caption="Painel de ordem preenchido com valor investido e retorno estimado para a seleção escolhida.">
+      <img src="/images/order-slip-filled.png" alt="Painel de ordem preenchido" />
     </Frame>
   </Step>
 
-  <Step title="Confirme a Ordem">
-    Revise se você marcou o lado certo. Clique em **Buy** ou **Place Order**.
-    Após processar (alguns segundos), sua posição estará ativa.
+  <Step title="Confirme a ordem">
+    Revise rapidamente:
+    - Seleção correta?
+    - Valor investido faz sentido?
+    - Retorno potencial condiz com sua estratégia?
 
-    <Frame caption="Confirmação de compra realizada">
-      <img src="/images/order-confirmed.png" alt="Ordem Confirmada" />
+    Em seguida, clique em **Buy** ou **Place Order**.  
+    Após alguns segundos, a operação será confirmada e sua posição aparecerá no portfólio.
+
+    <Frame caption="Confirmação de compra na seleção escolhida do mercado 2026 FIFA World Cup Winner.">
+      <img src="/images/order-confirmed.png" alt="Ordem confirmada" />
     </Frame>
   </Step>
 </Steps>
 
 ---
 
-## Gerenciando sua Posição
+## Acompanhando e vendendo sua posição
 
 Depois de comprar, você não precisa ficar na tela do mercado. Vá para a aba **Portfolio**.
 
-* **Mantendo:** Você pode esperar o evento acabar. Se acertar, cada share vira $1.00.
-* **Vendendo (Trading):** Se você quiser sair antes do fim (para realizar lucro ou cortar prejuízo), clique na posição e selecione **Sell**.
+Ali você verá:
+- A seleção na qual entrou (ex.: **Brazil – 2026 FIFA World Cup Winner**)
+- Preço médio de entrada
+- Preço atual
+- Lucro ou prejuízo não realizado
 
-<Frame caption="Visão de Portfólio com botão de Venda">
-  <img src="/images/portfolio-sell-view.png" alt="Portfólio" />
+Você tem duas opções:
+
+- **Manter até o final:**  
+  Se sua seleção for campeã, cada share será liquidada a **$1.00**.
+
+- **Vender antes (trading):**  
+  Se o preço subir (por exemplo, o Brasil passa de fase e as odds melhoram), você pode vender as shares antes da final e travar o lucro.
+
+<Frame caption="Visão de portfólio com a posição no mercado 2026 FIFA World Cup Winner e opção de Sell.">
+  <img src="/images/portfolio-sell-view.png" alt="Portfólio com opção de venda" />
 </Frame>
 
 ---
 
-## O Ciclo Completo
+## O ciclo completo
 
-Agora você já sabe depositar, analisar e operar. O último passo do ciclo é colher os frutos do seu trabalho.
+Agora você já passou por todo o ciclo básico:
+
+1. Criar conta  
+2. Depositar USDC  
+3. Entender as odds  
+4. Fazer sua primeira operação
+
+O próximo passo é aprender a **tirar o dinheiro de volta para você**, quando decidir realizar seus lucros.
 
 <Card title="Como sacar seus lucros" icon="money-bill-transfer" href="/setup/withdrawing-profits">
   Aprenda a enviar seus ganhos de volta para sua conta bancária ou corretora.
