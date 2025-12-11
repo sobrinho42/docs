@@ -3,96 +3,99 @@ title: 'Como sacar seus lucros'
 description: 'Envie seu saldo USDC de volta para sua Corretora ou Carteira Pessoal.'
 ---
 
-Depois de operar e lucrar, você pode sacar seu saldo em **USDC (Rede Polygon)** para:
-1.  Uma **Exchange** (se quiser converter em Reais/Dólar).
-2.  Uma **Carteira Cripto** (se quiser manter a custódia em cripto).
+Depois de operar e lucrar, você pode sacar seu saldo em **USDC** para:
 
-O processo é rápido e seguro, desde que você siga os passos de rede corretamente.
+1.  Uma **Exchange** (se quiser converter em Reais/Dólar).
+2.  Uma **Carteira Cripto Pessoal** (se quiser manter a custódia em cripto).
+
+O processo é simples, desde que você escolha corretamente **para onde** enviar e **em qual rede** enviar.
 
 ---
 
-## Passo a Passo do Saque
+## Passo a passo do saque
 
 <Steps>
-  <Step title="Pegue o endereço de recebimento">
-    Você sempre começa no **destino**. Aonde você quer que o dinheiro chegue?
+  <Step title="Acesse o Withdraw no Polymarket">
+    Estando logado no Polymarket:
+
+    1. Clique em **Portfolio** (normalmente no topo ou no menu principal).  
+    2. Dentro do seu portfólio, localize e clique no botão **Withdraw** — é por ele que todo saque é iniciado.
+
+    <Frame caption="Exemplo de botão Withdraw dentro da área de Portfolio.">
+      <img src="/images/polymarket-withdraw-button.png" alt="Botão Withdraw no Portfolio" />
+    </Frame>
+  </Step>
+
+  <Step title="Pegue o endereço de recebimento (destino)">
+    Sempre comece pelo **destino**: é ele que vai fornecer o endereço para o qual o Polymarket irá enviar seu USDC.
 
     <Tabs>
       <Tab title="Para Corretora (Exchange)">
-        1. Abra sua exchange (Binance, Coinbase, Bybit).
-        2. Vá em **Depósito / Deposit**.
-        3. Escolha a moeda **USDC**.
-        4. **CRÍTICO:** Selecione a rede **Polygon (MATIC)**.
-        5. Copie o endereço exibido.
-
-        <Frame caption="Tela da exchange: USDC + Rede Polygon selecionada">
-          <img src="/images/exchange-deposit-screen.png" alt="Depósito Exchange" />
-        </Frame>
+        1. Abra sua exchange (ex.: Binance, Coinbase, Bybit).  
+        2. Vá em **Depósito / Deposit**.  
+        3. Selecione a moeda **USDC**.  
+        4. Selecione a **rede de sua escolha** (por exemplo, Polygon, Arbitrum, etc.).  
+           - Quando houver opção, **recomendamos Polygon**, por combinar custo baixo e ampla compatibilidade.  
+        5. Copie o **endereço de depósito** exibido (normalmente começando com `0x...` em redes EVM).
       </Tab>
 
       <Tab title="Para Carteira (Wallet)">
-        1. Abra sua carteira (ex: MetaMask, Phantom).
-        2. Certifique-se de estar na rede **Polygon**.
-        3. Copie o endereço público da sua carteira (começa com `0x...`).
-
-        <Frame caption="Copiando endereço da MetaMask">
-          <img src="/images/metamask-copy-address.png" alt="Endereço Wallet" />
-        </Frame>
+        1. Abra sua carteira (ex.: MetaMask, Phantom).  
+        2. Selecione a **rede** em que você deseja receber o USDC (por exemplo, Polygon).  
+        3. Copie o **endereço público** da sua carteira (começa com `0x...` em redes EVM).  
+        4. Confirme que a carteira suporta USDC na rede escolhida.
       </Tab>
     </Tabs>
   </Step>
 
-  <Step title="Acesse o Withdraw no Polymarket">
-    Logado no Polymarket, clique no seu saldo ou perfil no topo e selecione a opção **Withdraw**.
+  <Step title="Preencha os dados no Polymarket">
+    De volta ao Polymarket, na tela de **Withdraw**:
 
-    <Frame caption="Menu de saque no Polymarket">
-      <img src="/images/polymarket-withdraw-menu.png" alt="Botão Withdraw" />
-    </Frame>
+    1. No campo **Address**, cole o endereço que você copiou da exchange ou da wallet.  
+    2. No campo **Amount**, digite o valor em USDC que deseja sacar (ou use a opção de **Max**, se quiser sacar tudo).  
+    3. Confira se a **rede exibida** no Polymarket corresponde à rede que você selecionou no destino (ex.: Polygon → Polygon).
   </Step>
 
-  <Step title="Preencha os dados">
-    1. No campo **Address**, cole o endereço que você copiou no passo 1.
-    2. No campo **Amount**, digite o valor em USDC que deseja sacar (ou clique em "Max").
-
-    <Frame caption="Preenchendo endereço e valor">
-      <img src="/images/withdraw-form-filled.png" alt="Formulário de Saque" />
-    </Frame>
-  </Step>
-
-  <Step title="Revise e Confirme">
+  <Step title="Revise e confirme o saque">
     <Warning>
-      **Checklist de Segurança:**
-      * O endereço está correto?
-      * A corretora destino aceita USDC na **rede Polygon**?
-      * *Dica:* Se for seu primeiro saque grande, faça um teste com $5.00 antes.
+      **Checklist de segurança antes de confirmar:**
+      - O endereço de destino está correto (confira pelo menos os primeiros e últimos 4 caracteres)?  
+      - A **moeda** está correta (USDC)?  
+      - A **rede escolhida no destino** é compatível com a que está sendo usada no Polymarket?  
+      - Se for seu primeiro saque maior, considere fazer um **teste com um valor pequeno** (ex.: $5) antes.
     </Warning>
 
-    Clique em **Withdraw** para processar.
+    Se estiver tudo certo, clique em **Withdraw** para confirmar o envio.
   </Step>
 
-  <Step title="Verifique a chegada">
-    A rede Polygon é rápida. Em alguns instantes, verifique sua Exchange ou Wallet.
-    * Se não aparecer em 10 minutos: Confira o histórico de transações e, se necessário, contate o suporte com o ID da transação (Hash).
+  <Step title="Acompanhe a chegada dos fundos">
+    Após confirmar o saque:
 
-    <Frame caption="Confirmação de recebimento na Exchange">
-      <img src="/images/exchange-received-success.png" alt="Sucesso" />
-    </Frame>
+    - Redes como **Polygon** costumam processar em poucos minutos.  
+    - Verifique o saldo na sua **Exchange** ou **Wallet** na aba de depósitos/histórico.  
+    - Se não aparecer após algum tempo:
+      - Confira o **histórico de transações** no Polymarket.  
+      - Copie o **transaction hash (TXID)**.  
+      - Use o explorador de blocos da rede (ex.: Polygonscan, Arbiscan) para verificar o status.  
+      - Se necessário, entre em contato com o suporte da exchange/wallet informando o TXID.
   </Step>
 </Steps>
 
 ---
 
-## Conclusão do Módulo Básico
+## Conclusão do módulo básico
 
-Parabéns! Agora você já domina o ciclo completo do investidor:
-<Check>Entendeu o que são Odds e Probabilidades.</Check>
-<Check>Fez sua primeira operação de compra e venda.</Check>
-<Check>Sabe como depositar e sacar com segurança.</Check>
+Você já domina o ciclo operacional básico:
 
-### Próximo Nível: Inteligência e Automação
+<Check>Entender odds e probabilidade.</Check>
+<Check>Fazer depósitos em USDC.</Check>
+<Check>Abrir e fechar operações.</Check>
+<Check>Sacar seus lucros com segurança.</Check>
 
-Agora que você sabe operar o básico, vamos te dar **superpoderes**. O próximo módulo ensinará como copiar automaticamente o que os melhores do mundo estão fazendo.
+### Próximo nível: inteligência e automação
+
+Agora que você sabe operar o básico, o próximo passo é usar ferramentas que **potencializam** suas decisões, como alertas, tracking de carteiras e automação de estratégia.
 
 <Card title="Módulo: PolyTracker Bot" icon="robot" href="/bot/introduction">
-  Aprenda a configurar alertas em tempo real e usar o Radar para identificar carteiras milionárias.
+  Veja como configurar alertas em tempo real e usar o Radar para acompanhar carteiras consistentes no Polymarket.
 </Card>
