@@ -5,16 +5,11 @@ description: 'Passo a passo seguro para iniciar sua jornada no Polymarket.'
 
 Antes de operar, você precisa ter uma conta ativa no Polymarket. O processo é simples, mas vale seguir cada passo com atenção para garantir a segurança dos seus dados.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
-  title="Como criar conta no Polymarket"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ borderRadius: '8px', marginBottom: '20px' }}
-></iframe>
+Você pode acessar diretamente por este link oficial do Polymarket:
+
+[👉 Acessar o Polymarket](https://polymarket.com/?ref=SEU_REF_AQUI)
+
+> Substitua `SEU_REF_AQUI` pelo seu código de referral antes de publicar.
 
 ---
 
@@ -25,72 +20,91 @@ Antes de operar, você precisa ter uma conta ativa no Polymarket. O processo é 
     Abra o navegador (de preferência no computador) e digite o endereço oficial.
 
     <Warning>
-      **Segurança em primeiro lugar:**
-      Confirme se o endereço começa com `https://` e se o cadeado de conexão segura está visível. Existem sites falsos (phishing), certifique-se de estar em **polymarket.com**.
+      **Segurança em primeiro lugar:**  
+      Confirme se o endereço começa com `https://` e se o cadeado de conexão segura está visível.  
+      Existem sites falsos (*phishing*). Certifique-se de estar em **polymarket.com**.
     </Warning>
 
-    <Frame caption="Barra de endereço correta com cadeado de segurança.">
+    <Frame caption="Exemplo de barra de endereço correta com cadeado de segurança.">
       <img src="/images/setup-url-check.png" alt="Verificação de URL segura" />
     </Frame>
   </Step>
 
-  <Step title="Inicie o Cadastro">
-    Na página inicial, localize o botão **"Sign Up"** ou **"Get Started"** (geralmente localizado no canto superior direito) e clique nele.
-  </Step>
+  <Step title="Inicie o cadastro (Sign Up)">
+    Na página inicial, localize o botão **“Sign Up”** (geralmente no canto superior direito) e clique nele.
 
-  <Step title="Escolha o método de acesso">
-    O Polymarket oferece duas formas principais de entrada. Escolha a que melhor se adapta ao seu perfil:
-
-    <CardGroup cols={2}>
-      <Card title="E-mail / Google" icon="google" color="#EA4335">
-        **Recomendado para Iniciantes**
-        * Login familiar via Google ou Link Mágico no E-mail.
-        * A plataforma cria e gerencia a carteira (wallet) para você.
-        * Recuperação de conta mais simples.
-      </Card>
-      <Card title="Crypto Wallet" icon="wallet" color="#F59E0B">
-        **Para Usuários Avançados**
-        * Conecte sua MetaMask, Coinbase ou WalletConnect.
-        * Autenticação via assinatura de mensagem (sem senha).
-        * Controle total das chaves privadas (Self-custody).
-      </Card>
-    </CardGroup>
-  </Step>
-
-  <Step title="Finalize a Conexão">
-    Dependendo da sua escolha anterior, siga o fluxo:
-
-    **Opção A: Google / E-mail**
-    1. Selecione "Continue with Google" ou digite seu e-mail.
-    2. Se for e-mail, clique no link de confirmação enviado para sua caixa de entrada.
-    3. Se for Google, apenas autorize o pop-up padrão.
-
-    **Opção B: Carteira Cripto**
-    1. Selecione sua carteira (ex: MetaMask).
-    2. Um pop-up da extensão abrirá pedindo uma **Assinatura**.
-    3. Assine a mensagem (Isso não é uma transação e não tem custo).
-
-    <Frame caption="Tela de seleção de método de login.">
-      <img src="/images/setup-signup-options.png" alt="Opções de Login" />
+    <Frame caption="Botão de Sign Up na interface inicial do Polymarket.">
+      <img src="/images/setup-signup-button.png" alt="Botão Sign Up do Polymarket" />
     </Frame>
   </Step>
 
-  <Step title="Verifique o Acesso">
-    Após o login, você será redirecionado para a página inicial.
-    * Confira se aparece seu ícone de perfil no canto superior direito.
-    * Ao clicar nele, você deve ver seu saldo ($0.00 USDC) e seu endereço de carteira (começando com `0x...`).
+  <Step title="Escolha o método de acesso">
+    O Polymarket oferece duas formas principais de acesso. Escolha a que melhor se adapta ao seu perfil:
 
-    <Frame caption="Dashboard logado mostrando perfil e saldo zerado.">
-      <img src="/images/setup-dashboard-logged.png" alt="Dashboard Logado" />
+    <CardGroup cols={2}>
+      <Card title="Google / E-mail" icon="google" color="#EA4335">
+        **Recomendado para iniciantes**
+        - Login familiar via **Google** ou link mágico enviado para o **e-mail**.
+        - A plataforma cria e gerencia a carteira para você.
+        - Recuperação de acesso mais simples.
+      </Card>
+
+      <Card title="Carteira Cripto (Wallet)" icon="wallet" color="#F59E0B">
+        **Para usuários avançados**
+        - Conecte uma carteira como MetaMask, Coinbase ou via WalletConnect.
+        - Autenticação por assinatura de mensagem (sem senha).
+        - Controle total das chaves privadas (*self-custody*).
+      </Card>
+    </CardGroup>
+
+    <Note>
+      As opções de conexão com carteira cripto são poderosas, mas voltadas para quem já tem familiaridade com **blockchain** e gestão de chaves.  
+      Se você está começando agora, use **Google ou e-mail**.
+    </Note>
+
+    <Frame caption="Tela de seleção do método de login (Google, e-mail ou carteira cripto).">
+      <img src="/images/setup-login-options.png" alt="Opções de login no Polymarket" />
+    </Frame>
+  </Step>
+
+  <Step title="Finalize a conexão">
+    Dependendo da sua escolha anterior, siga o fluxo abaixo:
+
+    **Opção A: Google / E-mail**
+
+    1. Clique em **“Continue with Google”** ou insira seu e-mail.
+    2. Se escolher e-mail, verifique sua caixa de entrada e clique no link de confirmação.
+    3. Se escolher Google, autorize o acesso na janela de confirmação.
+
+    **Opção B: Carteira Cripto**
+
+    1. Selecione sua carteira (por exemplo, MetaMask).
+    2. Um pop-up da carteira será aberto pedindo uma **assinatura**.
+    3. Assine a mensagem.  
+       > Isso **não é** uma transação on-chain e **não tem custo**. É apenas uma prova de que você controla aquela carteira.
+  </Step>
+
+  <Step title="Verifique se está logado corretamente">
+    Após concluir o login, você será redirecionado para o painel inicial do Polymarket.
+
+    Verifique se:
+    - Há um ícone de perfil no canto superior direito.
+    - Ao clicar no perfil, você vê:
+      - seu saldo (por exemplo, **$0.00 USDC** se ainda não depositou),
+      - um endereço de carteira iniciando com `0x...`.
+
+    <Frame caption="Dashboard logado do Polymarket, com perfil e saldo visíveis.">
+      <img src="/images/setup-dashboard-logged.png" alt="Dashboard logado do Polymarket" />
     </Frame>
   </Step>
 </Steps>
 
 ---
 
-## Próximo Passo
+## Próximo passo
 
-Com a conta criada e validada, seu terminal está pronto. Agora precisamos abastecê-lo com capital para operar.
+Com a conta criada e validada, seu “terminal” de operações está pronto.  
+Agora você precisa abastecê-lo com capital para operar.
 
 <Card title="Como depositar USDC" icon="money-bill-transfer" href="/setup/funding-usdc-polygon">
   Aprenda a enviar fundos da sua corretora para o Polymarket usando a rede Polygon.
