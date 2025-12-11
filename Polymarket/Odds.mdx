@@ -1,18 +1,16 @@
 ---
 title: 'Como interpretar as Odds'
-description: 'Aprenda a transformar preços do Polymarket em probabilidades e entender como suas operações realmente funcionam.'
+description: 'Entenda como ler preços como probabilidades e como isso afeta suas operações.'
 ---
 
-Para operar de forma inteligente no Polymarket, você precisa dominar um conceito simples, mas poderoso: **preço = probabilidade**.  
-Os mercados do Polymarket não são como apostas tradicionais — eles funcionam como um **mercado financeiro de probabilidades**.
-
-O vídeo abaixo ilustra perfeitamente essa lógica.
+No Polymarket, **preço = probabilidade**.  
+Antes de operar, você precisa dominar essa lógica — e este vídeo resume perfeitamente:
 
 <iframe
   width="100%"
   height="400"
   src="https://www.youtube.com/embed/f0fLy5DhcYY?start=306&end=489&controls=0&modestbranding=1&rel=0&showinfo=0"
-  title="Como interpretar odds e operar no Polymarket"
+  title="Como interpretar odds no Polymarket"
   frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
@@ -21,152 +19,125 @@ O vídeo abaixo ilustra perfeitamente essa lógica.
 
 ---
 
-## O que as odds realmente significam
+## O básico: o preço já te diz tudo
 
-No Polymarket, o preço da share **é a probabilidade implícita** de o evento acontecer.
+Cada share do Polymarket:
 
-Exemplo real do vídeo:
+- vale **$1.00** se o evento acontecer
+- vale **$0.00** se não acontecer
 
-- Um mercado está precificando **“Corte de 50bps”** com chance de **3%**.
-- Isso significa:
-  - **YES** custa muito pouco (2.6¢)
-  - **NO** custa muito mais (97.12¢)
+Então o **preço atual** é a probabilidade implícita.
+
+Exemplo real (simplificado):
+
+- YES a **$0.026** → ~3% de chance  
+- NO a **$0.9712** → ~97% de chance  
 
 <CardGroup cols={2}>
-  <Card title="Comprar YES" icon="arrow-up" color="#3b82f6">
-    - Barato quando a probabilidade é baixa  
-    - Alto retorno potencial  
-    - Alto risco  
+  <Card title="YES barato" icon="arrow-up" color="#3b82f6">
+    Evento improvável  
+    Lucro potencial alto  
+    Risco elevado  
   </Card>
 
-  <Card title="Comprar NO" icon="arrow-down" color="#ef4444">
-    - Caro quando a probabilidade é baixa  
-    - Baixo retorno potencial  
-    - Menor risco (segundo o mercado)  
+  <Card title="NO caro" icon="arrow-down" color="#ef4444">
+    Evento provável  
+    Lucro pequeno  
+    Risco menor  
   </Card>
 </CardGroup>
 
-> O mercado está dizendo: “é muito improvável que isso aconteça”.
-
 ---
 
-## Como o lucro é formado
+## Como o lucro funciona (sem complicação)
 
-Toda share do Polymarket vale **$1.00** se o evento acontecer e **$0.00** se não acontecer.
+Se você compra YES a 2.6¢:
 
-### Exemplo no vídeo — comprando **YES** por 2.6¢
+- Seu custo: **$0.026**
+- Se o evento acontecer: vira **$1.00**
+- Lucro por share: **$0.974**
 
-Se o evento acontecer:
+Se você compra NO a 97¢:
 
-- Você pagou **$0.026**
-- Recebe **$1.00**
-- Lucro por share: **$0.974** (97.4%)
-
-### Exemplo — comprando **NO** por 97.12¢
-
-Se o evento *não* acontecer:
-
-- Você pagou **$0.9712**
-- Recebe **$1.00**
-- Lucro por share: **$0.025** (2.5%)
+- Seu custo: **$0.97**
+- Se o evento não acontecer: vira **$1.00**
+- Lucro por share: **$0.03**
 
 <Note>
-  A relação é sempre assim:  
-  **quanto mais improvável o evento, maior o retorno do YES e menor o retorno do NO.**
+  Quanto menor a probabilidade, maior o retorno do YES e menor o retorno do NO.
 </Note>
 
 ---
 
-## Comparando o risco x retorno
+## Risco x retorno: enxergue a diferença rapidamente
 
-O vídeo mostra um exemplo com **$100 apostados**:
-
-| Operação | Investimento | Retorno se ganhar | Lucro |
-|---------|--------------|-------------------|--------|
-| YES a 2.6¢ | $100 | ~$3,687 | Muito alto |
-| NO a 97.12¢ | $100 | ~$102.56 | Muito baixo |
+| Operação | Investimento | Lucro potencial |
+|---------|--------------|-----------------|
+| YES (evento improvável) | $100 | Muito alto |
+| NO (evento provável) | $100 | Muito baixo |
 
 <Warning>
-  Isso não significa que “YES é melhor”.  
-  Significa apenas que **YES paga muito mais porque tem chance mínima de acontecer**.
+  Isso não é “escolher YES ou NO”.  
+  É entender **por que** o mercado paga muito num lado e pouco no outro.
 </Warning>
 
 ---
 
-## O que realmente diferencia o Polymarket das apostas tradicionais
+## O ponto-chave: você não precisa esperar o resultado
 
-Aqui está o ponto mais importante do vídeo:
+É aqui que o Polymarket se diferencia de apostas tradicionais.
 
-### Você não precisa esperar o resultado final para lucrar.
+Se o preço subir, **você pode vender antes do evento e realizar lucro**.
 
-Se o preço subir **antes do evento**, você pode vender suas shares e realizar lucro imediatamente.
+Exemplo prático:
 
-Exemplo do vídeo:
+- Você compra YES por 2.6¢  
+- Sai uma notícia mudando o cenário  
+- O preço dispara para 40¢, 50¢, 70¢…
 
-- Você compra $10 em YES por um evento bem improvável.
-- No dia seguinte, surge uma notícia dizendo que a chance aumentou.
-- As shares disparam para 40¢, 50¢, 60¢, 70¢…
-
-Seus $10 podem virar $250 ou $300 **antes** do evento resolver.
+Seu lucro vem dessa variação — **não do resultado final**.
 
 <Check>
-  Isso é possível porque o Polymarket é um **mercado peer-to-peer**.  
-  Se houver comprador, você pode vender imediatamente.
+  Você está tradando **informação**, não o evento em si.
 </Check>
 
 ---
 
-## A lógica por trás disso
+## O mercado reage a notícias, não a palpites
 
-Você não está negociando o resultado final.  
-Você está negociando **informação**.
+Pequenos sinais podem mexer no preço:
 
-- Notícias  
-- Rumores  
-- Pesquisas  
-- Mudança no sentimento do mercado  
-- Fatos novos  
-- Coletivas de imprensa  
-- Tweets de políticos  
-- Decisões econômicas  
+- discursos  
+- pesquisas  
+- manchetes  
+- rumores  
+- anúncios econômicos  
 
-Todo esse fluxo altera os preços **ao vivo** — e é isso que você está tradando.
+Isso é o que gera oportunidade.
 
-<Note>
-  **Você está tradando probabilidades, não eventos.**
-</Note>
-
----
-
-## Exemplo visual simplificado
-
-Imagine o gráfico de um mercado subindo após uma notícia inesperada.
-
-<Frame caption="Movimentos rápidos de preço após novas informações.">
-  <img src="/images/odds-price-move-example.png" alt="Exemplo de alta repentina no preço das shares" />
+<Frame caption="Exemplo: movimento rápido após nova informação">
+  <img src="/images/odds-price-move-example.png" alt="Movimento brusco de preço" />
 </Frame>
 
-> Se você comprou antes da notícia, pode realizar lucro imediatamente — mesmo que o evento final acabe sendo o oposto.
-
 ---
 
-## A mentalidade correta
+## Mentalidade ideal
 
 <Card title="Resumo Essencial" icon="brain" color="#7c3aed">
-  - Odds = probabilidades implícitas  
+  - Preço = probabilidade  
   - YES barato = evento improvável  
   - NO caro = evento provável  
-  - Lucro vem da variação de preço, não do resultado final  
-  - Informações novas mudam tudo  
-  - Você pode entrar e sair a qualquer momento  
+  - Lucro vem da variação, não do fim  
+  - Notícias mudam tudo  
+  - Entre e saia a qualquer momento  
 </Card>
 
 ---
 
 ## Próximo passo
 
-Agora que você entende como interpretar odds e como funcionam os movimentos de preço, podemos entrar no ato de operar dentro do Polymarket.
+Agora que você entende como o preço reflete probabilidades e como o mercado reage a informações, vamos para a prática.
 
 <Card title="Fazendo sua primeira operação" icon="bolt" href="/learn/how-to-trade">
-  Veja como abrir e fechar posições de forma segura.
+  Veja como abrir e fechar posições dentro do Polymarket.
 </Card>
