@@ -1,106 +1,63 @@
 ---
-title: 'Comandos do Bot'
-description: 'Domine as funcionalidades essenciais: /start, /seguir, /lista e /help.'
+title: 'Menu Inicial e Comandos'
+description: 'Entenda a navegação e personalize as configurações do seu bot.'
 ---
 
-O PolyTracker Bot funciona a partir de uma interface de chat simples e direta no Telegram. Tudo começa pelo menu principal, mas você tem total controle através dos comandos de texto.
+Após a validação, você terá acesso ao **Menu Principal**. Ele foi desenhado para ser direto, permitindo que você gerencie todo o seu monitoramento com poucos cliques.
 
----
-
-## `/start` — Iniciar o Bot
-
-Este é o ponto de partida. Se o bot travar ou se você quiser limpar a tela e ver o menu principal novamente, basta enviar este comando.
-
-**O que ele faz:**
-* Abre o menu inicial.
-* Exibe os botões de ação rápida.
-* Confirma a conexão com sua conta PolyTracker.
-
-<Frame caption="Menu inicial após o comando /start">
-  <img src="/images/bot-start-menu.png" alt="Menu Start" />
+<Frame caption="Visão geral do Menu Principal no Telegram">
+  <img src="/images/bot-main-menu.png" alt="Menu Principal do Bot" />
 </Frame>
 
----
+## O Painel de Controle
 
-## `/seguir` — Adicionar Carteira
+O menu é dividido em quatro pilares fundamentais:
 
-É aqui que você expande seu radar. Use este comando para cadastrar um novo trader para monitoramento.
-
-<Steps>
-  <Step title="Envie o comando">
-    Digite `/seguir` no chat e envie.
-  </Step>
-  <Step title="Informe o alvo">
-    O bot pedirá a carteira. Você pode enviar:
-    * O **Endereço** (Ex: `0x123...`)
-    * O **Usuário** Polymarket (Ex: `@TrumpWhale`, quando disponível).
-  </Step>
-  <Step title="Defina um Apelido (Nome)">
-    Para facilitar sua organização, o bot pedirá um nome.
-    * Ex: *"Baleia Eleições"*, *"Trader Esportes"*, *"Carteira X"*.
-  </Step>
-  <Step title="Confirmação">
-    Pronto. A partir de agora, qualquer movimento dessa carteira gera um alerta para você.
-  </Step>
-</Steps>
-
-<Frame caption="Fluxo de cadastro: Comando > Endereço > Nome definido">
-  <img src="/images/bot-follow-flow.png" alt="Fluxo Seguir" />
-</Frame>
-
----
-
-## `/lista` — Gerenciar Carteiras
-
-O comando `/lista` é o seu painel de controle. Ele exibe todas as carteiras que você monitora e oferece botões para análise profunda de cada uma.
-
-<Frame caption="Lista de carteiras com botões de ação">
-  <img src="/images/bot-list-view.png" alt="Comando Lista" />
-</Frame>
-
-### Botões de Ação
-
-Abaixo de cada carteira listada, você encontrará três botões interativos:
-
-<CardGroup cols={1}>
-  <Card title="👤 Perfil (Polymarket)" icon="user">
-    Ao clicar, você abre o link direto da carteira no site do Polymarket.
-    * **O que ver:** Patrimônio total, histórico de PnL (Lucro/Prejuízo) e overview dos mercados operados.
-    
-    <Frame caption="Perfil da carteira aberto no navegador">
-        <img src="/images/polymarket-profile-view.png" alt="Perfil Polymarket" />
-    </Frame>
+<CardGroup cols={2}>
+  <Card title="Track New Wallet" icon="magnifying-glass-plus">
+    **Onde tudo começa.** Use este botão para adicionar uma nova carteira de investidor à sua lista de monitoramento.
   </Card>
-
-  <Card title="📊 Posições Abertas" icon="chart-simple">
-    Este é o relatório mais poderoso. O bot gera um resumo instantâneo com:
-    * **Market:** Link direto clicável para o mercado.
-    * **Lado:** Se ele comprou YES ou NO.
-    * **Shares:** Quantidade de ações.
-    * **Preço:** Preço Médio de entrada vs. Preço Atual.
-    * **PnL:** Se a posição está no lucro ou prejuízo agora.
-
-    <Frame caption="Relatório detalhado de posições abertas">
-        <img src="/images/bot-open-positions.png" alt="Posições Abertas" />
-    </Frame>
+  <Card title="Manage Wallets" icon="list-check">
+    **Sua gestão.** Veja a lista de quem você está seguindo, ajuste alertas individuais, pause notificações ou remova carteiras.
   </Card>
-
-  <Card title="❌ Parar de Seguir" icon="trash">
-    Remove a carteira da sua lista imediatamente. Você deixará de receber notificações sobre ela.
-
-    <Frame caption="Confirmação de remoção da carteira">
-        <img src="/images/bot-unfollow-confirm.png" alt="Parar de Seguir" />
-    </Frame>
+  <Card title="General Settings" icon="gear">
+    **Ajustes Globais.** Configure como o bot se comporta, altere o idioma e o modo de notificação.
+  </Card>
+  <Card title="Help & Support" icon="life-ring">
+    **Suporte.** Acesso rápido aos tutoriais (PolyTracker Learn) e contato direto com nossa equipe.
   </Card>
 </CardGroup>
 
 ---
 
-## `/help` — Ajuda
+## Configurações Gerais (General Settings)
 
-Esqueceu algum comando? Digite `/help`.
-O bot exibirá um resumo rápido de todas as funcionalidades e links para o suporte, caso precise de ajuda humana.
+Ao clicar em **General Settings**, você personaliza a experiência de uso do bot. Aqui estão as opções disponíveis:
 
-<Frame caption="Tela de ajuda com resumo dos comandos">
-  <img src="/images/bot-help-screen.png" alt="Tela Help" />
-</Frame>
+### 1. Notification Mode (Modo de Notificação)
+
+Esta é a configuração mais importante. Ela define como o histórico do chat se comporta quando há atualizações em uma posição.
+
+| Modo | Como funciona | Recomendação |
+| :--- | :--- | :--- |
+| **Clean Mode** | Sempre que houver uma atualização em um mercado já notificado, a mensagem antiga é **deletada** e substituída pela nova. | ✅ **Recomendado**<br/>Mantém o chat limpo e focado no preço atual. |
+| **History Mode** | Gera uma **nova mensagem** para cada atualização. Nenhuma mensagem é apagada. | **Auditoria**<br/>Bom para ver o histórico, mas pode poluir o feed visualmente. |
+
+### 2. Ajustes de Localização
+
+* **Change Timezone:** Atualize seu fuso horário a qualquer momento. Essencial para saber se aquela operação foi feita agora ou horas atrás.
+* **Change Language:** Alterne o idioma da interface entre Português e Inglês.
+
+---
+
+## Ajuda e Suporte
+
+No menu **Help & Support**, você encontra:
+
+* 📚 Link direto para o **PolyTracker Learn** (este guia).
+* 📧 E-mail de contato para suporte técnico ou financeiro.
+
+<Tip>
+  **Dica de Navegação:**
+  Nos próximos tópicos, vamos focar na parte operacional: como usar o **Track New Wallet** e o **Manage Wallets** para montar sua estratégia.
+</Tip>
