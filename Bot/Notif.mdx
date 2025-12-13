@@ -22,9 +22,9 @@ Este alerta dispara quando o investidor entra em um mercado onde ele não tinha 
 * **Market & Outcome:** O evento e o resultado apostado (ex: "Trump Winner", "Yes").
 * **Shares:** Quantidade de ações compradas.
 * **Position Details:**
-  * `Avg Price`: O preço médio pago por ação (a probabilidade que ele pagou).
+  * `Avg Price`: O preço médio pago por ação.
   * `Value`: O valor total investido em Dólares.
-  * `(% Portfolio)`: **Dado Crítico.** Mostra quanto essa aposta representa da banca total do investidor. (Ex: 10% indica alta convicção; 0.5% pode ser apenas um teste).
+  * `(% Portfolio)`: **Dado Crítico.** Mostra quanto essa aposta representa da banca total do investidor.
 * **Time:** Horário exato da operação.
 
 ---
@@ -42,6 +42,7 @@ Ocorre quando o investidor já estava posicionado e decide **comprar mais**. Iss
   * *Exemplo:* `10.000 -> 15.000 (+5.000)`.
 * **Buy Details:** Mostra o preço médio e valor apenas dessa *nova compra*.
 * **Total Position:** O resumo acumulado da posição inteira após essa compra.
+* * **Open PnL:** Profit and Loss caso o investidor fechasse a operação nesse momento.
 
 ---
 
@@ -58,7 +59,7 @@ Ocorre quando o investidor vende apenas **uma parte** das ações. Ele pode esta
   * *Exemplo:* `15.000 -> 10.000 (-5.000)`.
 * **Sell Details:** O preço e valor dessa venda específica.
 * **Realized PnL:** O Lucro ou Prejuízo consolidado referente *apenas a essa parcela vendida*.
-* **Position Left:** O quanto ele ainda mantém no jogo (Skin in the game) e o PnL aberto dessa sobra.
+* **Position Left:** O quanto ele ainda mantém no jogo e o PnL aberto dessa sobra.
 
 ---
 
