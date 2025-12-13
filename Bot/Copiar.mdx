@@ -1,107 +1,65 @@
 ---
-title: 'Como copiar uma operação'
-description: 'Do alerta à execução: transformando notificação em lucro.'
+title: 'Como Copiar uma Operação'
+description: 'Do alerta à execução: como agir rápido e com segurança.'
 ---
 
-Aqui vamos mostrar, de forma prática, como transformar uma notificação do PolyTracker Bot em uma operação real no Polymarket.
+Receber a notificação no seu celular é apenas metade do processo. A outra metade é a execução.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
-  title="Passo a Passo: Replicando uma Operação"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ borderRadius: '8px', marginBottom: '20px' }}
-></iframe>
+O PolyTracker não opera por você automaticamente. Nós entregamos a inteligência, e você aperta o botão. Abaixo, detalhamos o fluxo ideal para transformar um alerta em uma operação bem-sucedida.
 
 ---
 
-## 1. O Gatilho (A Notificação)
+## 1. O Fluxo de Decisão
 
-Este fluxo se aplica principalmente quando você recebe alertas de **Entrada** ou **Aumento de Mão**:
-* 🟢 **Nova posição**
-* ⬆️ **Posição atualizada – compra**
+Ao receber um alerta (ex: `New Position`), siga este checklist mental rápido antes de abrir sua carteira:
 
 <Steps>
-  <Step title="Leitura do Alerta">
-    Ao receber a mensagem no Telegram, foque em 3 pontos:
-    1. **Mercado:** Qual é a pergunta?
-    2. **Lado:** Ele comprou YES ou NO?
-    3. **Convicção:** Qual a **% do patrimônio** usada?
+  <Step title="Analise a Convicção (% Portfolio)">
+    Este é o dado mais importante do alerta. Olhe para o campo `(% Portfolio)`.
+    
+    * **0.1% a 1%:** Pode ser apenas um teste, uma aposta recreativa ou "hedge" (proteção).
+    * **3% a 5%:** Posição relevante. O investidor tem uma tese sólida.
+    * **10% ou mais:** "High Conviction". O investidor está extremamente confiante (ou é imprudente).
 
-    <Frame caption="Destaque para a % do patrimônio na notificação">
-      <img src="/images/notification-highlight-percent.png" alt="Leitura da Notificação" />
+    <Frame caption="Destaque para a porcentagem do portfólio no alerta">
+      <img src="/images/notif-highlight-portfolio.png" alt="Destaque Porcentagem" />
     </Frame>
   </Step>
 
-  <Step title="Acesso Rápido">
-    Se a operação fizer sentido para sua estratégia, clique no **Link do Market** (texto azul) dentro da própria notificação.
-    O Polymarket abrirá direto na página correta.
-
-    <Frame caption="Tela do mercado aberta via link">
-      <img src="/images/polymarket-market-screen.png" alt="Tela do Mercado" />
-    </Frame>
+  <Step title="Acesse o Mercado">
+    Se a oportunidade parecer boa, não perca tempo procurando manualmente.
+    
+    No próprio balão da notificação do bot, clique no link azul **Market** (ou no nome do evento). Isso abrirá a página exata do evento no site do Polymarket.
   </Step>
 
-  <Step title="Conferência de Preço">
-    Antes de comprar, compare o preço atual com o preço que o trader pagou (informado no bot).
-    * **Preço igual ou menor:** Ótima oportunidade.
-    * **Preço muito maior:** Cuidado, o retorno potencial já diminuiu.
-  </Step>
-
-  <Step title="Defina o Tamanho (A Regra de Ouro)">
-    Aqui está o segredo dos profissionais. **Não copie o valor em Dólares. Copie a Proporção.**
-
-    <Info>
-      **Cópia Proporcional:**
-      Se a "Baleia" tem $1.000.000 e colocou $30.000, ela arriscou **3%**.
-      Se você tem $1.000, você deve colocar **$30 (3%)**.
-
-      Respeite o gerenciamento de risco da carteira que você segue.
-    </Info>
-
-    No painel de compra, digite o valor em USDC calculado.
-
-    <Frame caption="Preenchendo o valor da ordem">
-      <img src="/images/polymarket-buy-panel.png" alt="Painel de Compra" />
-    </Frame>
-  </Step>
-
-  <Step title="Execução">
-    1. Selecione o mesmo lado (**YES** ou **NO**).
-    2. Revise o valor e o preço estimado.
-    3. Clique em **Buy / Place Order**.
-
-    <Frame caption="Confirmação da ordem executada">
-      <img src="/images/polymarket-order-confirmed.png" alt="Ordem Confirmada" />
-    </Frame>
+  <Step title="Cheque o Preço (Slippage)">
+    Verifique o preço atual no site em comparação ao `Avg Price` que o bot informou.
+    
+    * **Preço próximo?** A oportunidade ainda existe.
+    * **Preço disparou?** Se a baleia pagou 30¢ e agora já está 50¢, o risco/retorno mudou. Avalie se ainda vale a pena entrar.
   </Step>
 </Steps>
 
 ---
 
-## 2. A Saída (Hora de Vender)
+## 2. A Regra de Ouro: Replicação Proporcional
 
-Você entrou junto, agora pode sair junto. Fique atento a notificações de:
-* ⬇️ **Posição atualizada – venda** (Redução parcial)
-* 🏁 **Posição encerrada** (Vendeu tudo)
+O erro número 1 de quem começa a copiar traders é tentar replicar os **valores absolutos**.
 
-### Como proceder:
+Você não deve olhar para a quantidade de Shares ou para o valor em Dólares, mas sim para a **proporção**.
 
-1.  Ao receber o alerta de venda, clique no link do market novamente.
-2.  Verifique sua posição atual (Seu PnL).
-3.  **Espelhe a ação:**
-    * Se ele vendeu tudo: Venda 100% da sua posição.
-    * Se ele reduziu a mão: Venda uma parte proporcional para garantir lucro.
+<Warning>
+  **Não copie o valor financeiro. Copie a lógica.**
+</Warning>
 
-<Frame caption="Painel de Venda (Sell) no Polymarket">
-  <img src="/images/polymarket-sell-panel.png" alt="Painel de Venda" />
-</Frame>
+Se você tem uma banca de $1.000 e está seguindo uma "Baleia" com $100.000, a matemática deve ser:
 
----
+| Ação da Baleia | Sua Ação (Exemplo) |
+| :--- | :--- |
+| Entrou com **$3.000** | Isso é **3%** da banca dela. |
+| **Sua Execução** | Você deve entrar com **$30** (3% da sua banca). |
 
-## Conclusão
+**Por que isso é importante?**
+O investidor grande pode perder $3.000 em uma aposta de teste e continuar tranquilo. Para você, tentar copiar os mesmos $3.000 pode significar quebrar sua banca inteira em um único erro.
 
-Seguindo este roteiro, você transforma uma notificação do Telegram em uma operação estruturada, mantendo a mesma lógica e proporção de risco dos maiores investidores do mundo.
+Respeite a sua realidade financeira. O objetivo é crescer seu patrimônio em porcentagem, seguindo a inteligência dos grandes.
