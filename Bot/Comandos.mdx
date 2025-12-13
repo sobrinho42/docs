@@ -1,98 +1,98 @@
 ---
-title: 'Menu e Comandos'
-description: 'Domine todas as funcionalidades operacionais do PolyTracker Bot.'
+title: 'Menu and Commands'
+description: 'Master all operational features of PolyTracker Bot.'
 ---
 
-O Menu Inicial é o seu painel de controle. Ele foi desenhado para ser direto, permitindo que você adicione novas carteiras, gerencie seus alertas e configure o bot com poucos cliques.
+The Main Menu is your command center. It was designed to be streamlined, allowing you to add new wallets, manage your alerts, and configure the bot with just a few clicks.
 
-<Frame caption="Visão geral do Menu Principal">
-  <img src="/images/bot-main-menu.png" alt="Menu Principal do Bot" />
+<Frame caption="Overview of the Main Menu">
+  <img src="/images/bot-main-menu.png" alt="Bot Main Menu" />
 </Frame>
 
-Abaixo, detalhamos a função de cada botão, na ordem em que você provavelmente os utilizará.
+Below, we detail the function of each button in the order you will likely use them.
 
 ---
 
-## 1. Track New Wallet (Seguir Nova Carteira)
+## 1. Track New Wallet
 
-É aqui que você inicia o monitoramento de um investidor. Para isso, você precisará do **endereço público** da carteira dele (Address).
+This is where you start monitoring an investor. To do this, you will need their **public wallet address**.
 
 <Steps>
-  <Step title="Obtenha o Endereço">
-    No perfil do investidor dentro do Polymarket, localize e copie o endereço da carteira (geralmente começa com `0x...`).
+  <Step title="Get the Address">
+    On the investor's profile within Polymarket, locate and copy the wallet address (usually starting with `0x...`).
     
-    <Frame caption="Onde encontrar o endereço no perfil do Polymarket">
-      <img src="/images/polymarket-copy-address.png" alt="Copiando o endereço" />
+    <Frame caption="Where to find the address on a Polymarket profile">
+      <img src="/images/polymarket-copy-address.png" alt="Copying the address" />
     </Frame>
   </Step>
 
-  <Step title="Cadastre no Bot">
-    Clique no botão **Track New Wallet** e, quando solicitado, envie o endereço que você acabou de copiar.
+  <Step title="Register in the Bot">
+    Click the **Track New Wallet** button and, when prompted, paste and send the address you just copied.
   </Step>
 
-  <Step title="Defina um Apelido (Label)">
-    Dê um nome para identificar essa carteira (ex: "Baleia Trump", "Sniper Esportes"). Esse nome aparecerá em todas as notificações futuras.
+  <Step title="Set a Label (Nickname)">
+    Give this wallet a name to identify it (e.g., "Trump Whale", "Sports Sniper"). This name will appear in all future notifications.
   </Step>
 </Steps>
 
 ---
 
-## 2. Manage Wallets (Gerenciar Carteiras)
+## 2. Manage Wallets
 
-Esta é a sua central de gestão. Ao clicar aqui, você verá a lista de todas as carteiras que está seguindo.
+This is your management hub. Clicking here displays the list of all wallets you are currently following.
 
-Clicando em **Settings** ao lado de uma carteira específica, você abre o **Painel Individual** daquele investidor, onde tem acesso às ferramentas de controle:
+By clicking **Settings** next to a specific wallet, you open that investor's **Individual Panel**, giving you access to control tools:
 
-<Frame caption="Painel de Configuração Individual da Carteira">
-  <img src="/images/bot-wallet-settings.png" alt="Configurações da Carteira" />
+<Frame caption="Individual Wallet Configuration Panel">
+  <img src="/images/bot-wallet-settings.png" alt="Wallet Settings" />
 </Frame>
 
-### Ferramentas de Gestão Individual
+### Individual Management Tools
 
 <AccordionGroup>
-  <Accordion title="Positions (Raio-X)" icon="chart-pie">
-    Mostra instantaneamente as **maiores posições abertas** daquele investidor no momento. Ideal para entender rapidamente onde o dinheiro dele está alocado sem precisar esperar uma nova notificação.
+  <Accordion title="Positions (Snapshot)" icon="chart-pie">
+    Instantly shows the investor's **top open positions** right now. Ideal for quickly understanding where their money is allocated without waiting for a new notification.
   </Accordion>
 
   <Accordion title="Pause / Resume" icon="pause">
-    Deseja silenciar um trader temporariamente sem deixar de segui-lo? Use este botão para pausar e retomar os alertas dessa carteira específica.
+    Want to temporarily silence a trader without unfollowing? Use this button to pause and resume alerts for this specific wallet.
   </Accordion>
 
-  <Accordion title="Value & % Threshold (Filtros de Ruído)" icon="filter">
-    **Fundamental para sua estratégia.** Configure gatilhos para ser notificado apenas em movimentos relevantes:
+  <Accordion title="Value & % Threshold (Noise Filters)" icon="filter">
+    **Crucial for your strategy.** Configure triggers to be notified only on relevant moves:
     
-    * **Value Threshold:** Notificar apenas operações acima de $X (ex: acima de $500).
-    * **% Threshold:** Notificar apenas se a operação representar mais de Y% do portfólio dele (ex: acima de 5% da banca).
+    * **Value Threshold:** Notify only trades above $X (e.g., above $500).
+    * **% Threshold:** Notify only if the trade represents more than Y% of their portfolio (e.g., above 5% of their bankroll).
   </Accordion>
 
   <Accordion title="Rename & Untrack" icon="pen-to-square">
-    * **Rename:** Altere o apelido da carteira.
-    * **Untrack Wallet:** Para de seguir a carteira e a remove da sua lista.
+    * **Rename:** Change the wallet's label.
+    * **Untrack Wallet:** Stop following the wallet and remove it from your list.
   </Accordion>
 </AccordionGroup>
 
 ---
 
-## 3. General Settings (Configurações Gerais)
+## 3. General Settings
 
-Aqui você define as preferências globais do seu bot, que se aplicam a todas as notificações.
+Here you define the global preferences for your bot, which apply to all notifications.
 
-### Notification Mode (Modo de Notificação)
-Define como o histórico do chat se comporta.
+### Notification Mode
+Defines how the chat history behaves.
 
-| Modo | Como funciona | Recomendação |
+| Mode | How it works | Recommendation |
 | :--- | :--- | :--- |
-| **Clean Mode** | Mensagens antigas do mesmo mercado são **apagadas** e substituídas pela atualização mais recente. Mantém o chat limpo. | ✅ **Recomendado** |
-| **History Mode** | Gera uma **nova mensagem** para cada atualização. Nenhuma mensagem é apagada, criando um log histórico completo. | **Auditoria** |
+| **Clean Mode** | Old messages from the same market are **deleted** and replaced by the latest update. Keeps the chat clean. | ✅ **Recommended** |
+| **History Mode** | Generates a **new message** for every update. No message is deleted, creating a full historical log. | **Audit Trail** |
 
-### Outros Ajustes
-* **Change Timezone:** Ajuste seu fuso horário para que os alertas mostrem a hora correta da sua região.
-* **Change Language:** Alterne o idioma do bot (Português/Inglês).
+### Other Adjustments
+* **Change Timezone:** Adjust your timezone so that alerts display the correct local time for your region.
+* **Change Language:** Switch the bot language (Portuguese/English).
 
 ---
 
 ## 4. Help & Support
 
-Acesso rápido ao suporte:
-* Link direto para o **PolyTracker Learn**.
-* E-mail de contato para suporte técnico.
+Quick access to support:
+* Direct link to **PolyTracker Learn**.
+* Contact email for technical support.

@@ -1,102 +1,102 @@
 ---
-title: 'Guia de Notificações'
-description: 'Entenda a anatomia dos 6 tipos de alertas do PolyTracker.'
+title: 'Notification Guide'
+description: 'Understand the anatomy of the 6 PolyTracker alert types.'
 ---
 
-O PolyTracker possui um sistema de notificações detalhado. O objetivo não é apenas informar *o que* foi feito, mas dar contexto sobre a *convicção* e o resultado daquela operação.
+PolyTracker features a detailed notification system. The goal isn't just to inform you *what* happened, but to provide context regarding the *conviction* and the outcome of that trade.
 
-Existem **6 tipos de alertas**. Abaixo explicamos a estrutura de cada um para que você consiga ler o mercado em segundos.
+There are **6 types of alerts**. Below, we explain the structure of each one so you can read the market in seconds.
 
 ---
 
-## 1. New Position (Nova Posição)
+## 1. New Position
 
-Este alerta dispara quando o investidor entra em um mercado onde ele não tinha nenhuma posição aberta anteriormente. É o início de uma aposta.
+This alert triggers when the investor enters a market where they previously had no open position. It is the start of a trade.
 
-<Frame caption="Exemplo: Alerta de Nova Posição">
-  <img src="/images/notif-new-position.png" alt="Alerta New Position" />
+<Frame caption="Example: New Position Alert">
+  <img src="/images/notif-new-position.png" alt="New Position Alert" />
 </Frame>
 
-**Entendendo os dados:**
-* **Wallet:** O nome/apelido da carteira que fez a ação.
-* **Market & Outcome:** O evento e o resultado apostado (ex: "Trump Winner", "Yes").
-* **Shares:** Quantidade de ações compradas.
+**Understanding the data:**
+* **Wallet:** The name/label of the wallet taking action.
+* **Market & Outcome:** The event and the specific outcome (e.g., "Trump Winner", "Yes").
+* **Shares:** Number of shares purchased.
 * **Position Details:**
-  * `Avg Price`: O preço médio pago por ação.
-  * `Value`: O valor total investido em Dólares.
-  * `(% Portfolio)`: **Dado Crítico.** Mostra quanto essa aposta representa da banca total do investidor.
-* **Time:** Horário exato da operação.
+  * `Avg Price`: The average price paid per share.
+  * `Value`: The total amount invested in Dollars.
+  * `(% Portfolio)`: **Critical Metric.** Shows how much this trade represents of the investor's total portfolio/bankroll.
+* **Time:** Exact time of the trade.
 
 ---
 
-## 2. Position Updated: BUY (Aumento de Posição)
+## 2. Position Updated: BUY (Increasing Position)
 
-Ocorre quando o investidor já estava posicionado e decide **comprar mais**. Isso geralmente sinaliza um aumento de confiança na tese ou uma defesa de preço médio.
+Occurs when the investor was already positioned and decides to **buy more**. This usually signals increased confidence in the thesis or a move to average down their entry price (DCA).
 
-<Frame caption="Exemplo: Aumento de Posição">
-  <img src="/images/notif-update-buy.png" alt="Alerta Update Buy" />
+<Frame caption="Example: Position Increase">
+  <img src="/images/notif-update-buy.png" alt="Update Buy Alert" />
 </Frame>
 
-**O que muda aqui:**
-* **Shares:** Mostra a evolução da quantidade de ações com uma seta indicativa.
-  * *Exemplo:* `10.000 -> 15.000 (+5.000)`.
-* **Buy Details:** Mostra o preço médio e valor apenas dessa *nova compra*.
-* **Total Position:** O resumo acumulado da posição inteira após essa compra.
-* * **Open PnL:** Profit and Loss caso o investidor fechasse a operação nesse momento.
+**What changes here:**
+* **Shares:** Shows the change in share count with an indicator.
+  * *Example:* `10,000 -> 15,000 (+5,000)`.
+* **Buy Details:** Shows the average price and value of *this specific new purchase*.
+* **Total Position:** The accumulated summary of the entire position after this buy.
+* **Open PnL:** Profit and Loss if the investor were to close the trade right now.
 
 ---
 
-## 3. Position Updated: SELL (Realização Parcial)
+## 3. Position Updated: SELL (Partial Exit)
 
-Ocorre quando o investidor vende apenas **uma parte** das ações. Ele pode estar colocando lucro no bolso (Money in the pocket) ou diminuindo a exposição ao risco.
+Occurs when the investor sells only **a portion** of their shares. They might be taking profit ("money in the pocket") or reducing risk exposure.
 
-<Frame caption="Exemplo: Venda Parcial">
-  <img src="/images/notif-update-sell.png" alt="Alerta Update Sell" />
+<Frame caption="Example: Partial Sell">
+  <img src="/images/notif-update-sell.png" alt="Update Sell Alert" />
 </Frame>
 
-**O que muda aqui:**
-* **Shares:** Mostra a redução das ações.
-  * *Exemplo:* `15.000 -> 10.000 (-5.000)`.
-* **Sell Details:** O preço e valor dessa venda específica.
-* **Realized PnL:** O Lucro ou Prejuízo consolidado referente *apenas a essa parcela vendida*.
-* **Position Left:** O quanto ele ainda mantém no jogo e o PnL aberto dessa sobra.
+**What changes here:**
+* **Shares:** Shows the reduction in shares.
+  * *Example:* `15,000 -> 10,000 (-5,000)`.
+* **Sell Details:** The price and value of this specific sale.
+* **Realized PnL:** The consolidated Profit or Loss referring *only to this sold portion*.
+* **Position Left:** How much skin they still have in the game and the open PnL of that remainder.
 
 ---
 
-## 4. Position Closed: SOLD (Saída Total)
+## 4. Position Closed: SOLD (Full Exit)
 
-O investidor zerou a posição **antes** do evento ser concluído pelo Polymarket. Ele optou por sair do mercado voluntariamente.
+The investor closed the position completely **before** the event was concluded by Polymarket. They chose to exit the market voluntarily.
 
-<Frame caption="Exemplo: Saída Total (Venda)">
-  <img src="/images/notif-closed-sold.png" alt="Alerta Closed Sold" />
+<Frame caption="Example: Full Exit (Sold)">
+  <img src="/images/notif-closed-sold.png" alt="Closed Sold Alert" />
 </Frame>
 
-**Entendendo os dados:**
-* **Exit Details:** Compara o `Entry Price` (entrada) com o `Exit Price` (saída).
-* **PnL (Profit and Loss):** O resultado final da operação.
-  * 🟢: Lucro (Profit).
-  * 🔴: Prejuízo (Loss).
-  * Mostra o valor em dólar e a porcentagem de retorno (ROI).
+**Understanding the data:**
+* **Exit Details:** Compares the `Entry Price` vs. `Exit Price`.
+* **PnL (Profit and Loss):** The final result of the operation.
+  * 🟢: Profit.
+  * 🔴: Loss.
+  * Shows the dollar value and the Return on Investment (ROI) percentage.
 
 ---
 
-## 5. Position Closed: REDEEM (Fim do Mercado)
+## 5. Position Closed: REDEEM (Market Settlement)
 
-Estes alertas ocorrem quando o evento chega ao fim e o Polymarket liquida as posições. Aqui não há mais negociação, apenas o resultado final.
+These alerts occur when the event comes to an end and Polymarket settles the positions. There is no more trading here, just the final result.
 
-### ✅ REDEEM 1 (WON - Vitória)
-O investidor acertou o resultado. Cada ação passa a valer **$1.00**.
+### ✅ REDEEM 1 (WON)
+The investor predicted the result correctly. Each share is now worth **$1.00**.
 
-<Frame caption="Exemplo: Vitória (Redeem Won)">
-  <img src="/images/notif-redeem-won.png" alt="Alerta Redeem Won" />
+<Frame caption="Example: Victory (Redeem Won)">
+  <img src="/images/notif-redeem-won.png" alt="Redeem Won Alert" />
 </Frame>
 
-### ❌ REDEEM 0 (LOST - Derrota)
-O investidor errou o resultado. Cada ação passa a valer **$0.00**.
+### ❌ REDEEM 0 (LOST)
+The investor got it wrong. Each share is now worth **$0.00**.
 
-<Frame caption="Exemplo: Derrota (Redeem Lost)">
-  <img src="/images/notif-redeem-lost.png" alt="Alerta Redeem Lost" />
+<Frame caption="Example: Loss (Redeem Lost)">
+  <img src="/images/notif-redeem-lost.png" alt="Redeem Lost Alert" />
 </Frame>
 
-* **Value:** No caso de derrota, o valor recuperado é $0.
-* **PnL:** Será de -100% (Perda total do capital alocado naquela posição).
+* **Value:** In case of a loss, the recovered value is $0.
+* **PnL:** Will be -100% (Total loss of capital allocated to that position).

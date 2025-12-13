@@ -1,76 +1,77 @@
 ---
-title: 'Como Copiar uma Operação'
-description: 'Guia passo a passo para executar os sinais do PolyTracker na Polymarket.'
+title: 'How to Copy a Trade'
+description: 'Step-by-step guide to executing PolyTracker signals on Polymarket.'
+icon: 'copy'
 ---
 
-Recebeu um alerta? Ótimo. Agora é hora de avaliar e executar.
+Received an alert? Great. Now it's time to evaluate and execute.
 
 <Warning>
-  **Atenção:** O PolyTracker é uma ferramenta de **monitoramento**. A execução da ordem na Polymarket é feita manualmente por você. Isso garante que você tenha o controle final sobre seu dinheiro.
+  **Attention:** PolyTracker is a **monitoring** tool. Order execution on Polymarket is done manually by you. This ensures you have final control over your money.
 </Warning>
 
-## Passo a Passo da Execução
+## Execution Walkthrough
 
-Siga este fluxo para replicar a operação com segurança, seja ela uma nova aposta ou um aumento de posição.
+Follow this flow to replicate the trade safely, whether it's a fresh bet or a position increase.
 
 <Steps>
-  <Step title="Identifique o Sinal no Telegram">
-    Ao receber a notificação, identifique primeiro o tipo de movimento. O bot pode sinalizar uma **Nova Posição** ou uma **Compra** (aumento de posição).
+  <Step title="Identify the Signal on Telegram">
+    Upon receiving the notification, first identify the type of move. The bot might signal a **New Position** or a **Buy** (position increase).
     
-    Analise as informações chave na imagem/mensagem:
-    1. **O Mercado:** Qual é a pergunta? (Ex: "Bitcoin hit $100k?")
-    2. **O Lado (Side):** A baleia está comprando **YES** ou **NO**?
-    3. **Preço Médio:** A que preço ela está pagando agora?
-    4. **Porcentagem (%):** Quanto do portfolio foi usado nessa entrada? (Isso indica o nível de **convicção** dela).
+    Analyze the key information in the image/message:
+    1. **The Market:** What is the question? (e.g., "Bitcoin hit $100k?")
+    2. **The Side:** Is the whale buying **YES** or **NO**?
+    3. **Avg Price:** What price are they paying right now?
+    4. **Percentage (%):** How much of their portfolio was used in this entry? (This indicates their **conviction** level).
 
     <img
       className="block dark:hidden"
       src="/images/exemplo-alerta-light.png"
-      alt="Exemplo de Alerta do PolyTracker no Telegram"
+      alt="PolyTracker Telegram Alert Example"
     />
     <img
       className="hidden dark:block"
       src="/images/exemplo-alerta-dark.png"
-      alt="Exemplo de Alerta do PolyTracker no Telegram"
+      alt="PolyTracker Telegram Alert Example"
     />
     
     <Note>
-      **Dica:** Um sinal de `Buy` (Recompra/Aumento) pode indicar que o investidor continua confiante na tese. Da mesma forma, uma % alta do portfólio sugere uma "aposta forte", enquanto uma % baixa pode ser apenas um teste.
+      **Tip:** A `Buy` signal (Re-entry/Increase) may indicate the investor remains confident in the thesis. Similarly, a high portfolio % suggests a "strong bet," while a low % might just be a test.
     </Note>
   </Step>
 
-  <Step title="Acesse o Link do Mercado">
-    Clique no **Link para o Mercado** fornecido junto com o alerta. Isso abrirá a página exata do evento na Polymarket, garantindo que você não entre em um mercado errado ou duplicado.
+  <Step title="Access the Market Link">
+    Click the **Market Link** provided in the alert. This opens the exact event page on Polymarket, ensuring you don't enter a wrong or duplicate market.
   </Step>
 
-  <Step title="Compare o Preço (Spread)">
-    Antes de confirmar, olhe o preço atual da cota (*share price*):
+  <Step title="Compare the Price (Spread)">
+    Before confirming, look at the current *share price*:
     
-    * **Cenário Ideal:** O preço está próximo ou abaixo do que a baleia pagou.
-    * **Cenário de Atenção:** O preço disparou logo após o alerta. Avalie se o risco-retorno ainda compensa ou se vale a pena esperar um leve recuo.
+    * **Ideal Scenario:** The price is close to or below what the whale paid.
+    * **Caution Scenario:** The price spiked right after the alert. Evaluate if the risk/reward is still worth it or if it pays to wait for a slight pullback.
   </Step>
 
-  <Step title="Configure sua Ordem">
-    Na interface da Polymarket (painel à direita):
+  <Step title="Configure your Order">
+    On the Polymarket interface (right panel):
     
-    1.  Certifique-se de que a aba **Buy** está selecionada.
-    2.  Escolha o desfecho correto (**YES** ou **NO**) conforme o alerta.
-    3.  Digite o valor da sua entrada.
+    1.  Ensure the **Buy** tab is selected.
+    2.  Choose the correct outcome (**YES** or **NO**) matching the alert.
+    3.  Enter your entry amount.
     
     <Warning>
-      **Não copie o valor financeiro, copie a lógica!**
+      **Don't copy the dollar amount, copy the logic!**
       
-      Se a baleia entrou com $5.000, isso pode ser apenas 1% do banco dela. Respeite a **sua** realidade financeira. Leve em conta a porcentagem do patrimônio que discutiremos no capítulo de **Estratégias e Gestão de Risco**.
+      If the whale entered with $5,000, that might be just 1% of their bankroll. Respect **your own** financial reality. Take into account the percentage of portfolio we discuss in the **Strategies and Risk Management** chapter.
     </Warning>
     
-    <img src="/images/interface-polymarket-compra.png" alt="Interface de Compra na Polymarket" />
+    <img src="/images/interface-polymarket-compra.png" alt="Polymarket Buy Interface" />
   </Step>
 
-  <Step title="Confirme a Transação">
-    Clique em **Buy** e confirme sua operação. Pronto, você está posicionado junto com a Smart Wallet.
+  <Step title="Confirm the Transaction">
+    Click **Buy** and confirm your operation. Done, you are now positioned alongside the Smart Wallet.
   </Step>
 </Steps>
 
-## Monitoramento
+## Monitoring
 
-O jogo não acaba na compra. Use o **PolyTracker Bot** para acompanhar os próximos passos dessa carteira. Se ela vender (`Sell` ou `Close Position`), você receberá um novo alerta e poderá decidir se realiza o lucro também.
+The game doesn't end at the buy. Use **PolyTracker Bot** to track this wallet's next steps. If they sell (`Sell` or `Close Position`), you will receive a new alert and can decide whether to take profit as well.
