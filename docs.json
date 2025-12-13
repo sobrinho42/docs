@@ -26,8 +26,8 @@
               "Polymarket/Conta",
               "Polymarket/USDC",
               "Polymarket/Odds",
-              "Polymarket/Primeira",
               "Polymarket/OrderBook",
+              "Polymarket/Primeira",
               "Polymarket/Sacar"
             ]
           },
