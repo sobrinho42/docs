@@ -1,63 +1,98 @@
 ---
-title: 'Menu Inicial e Comandos'
-description: 'Entenda a navegação e personalize as configurações do seu bot.'
+title: 'Menu e Comandos'
+description: 'Domine todas as funcionalidades operacionais do PolyTracker Bot.'
 ---
 
-Após a validação, você terá acesso ao **Menu Principal**. Ele foi desenhado para ser direto, permitindo que você gerencie todo o seu monitoramento com poucos cliques.
+O Menu Inicial é o seu painel de controle. Ele foi desenhado para ser direto, permitindo que você adicione novas carteiras, gerencie seus alertas e configure o bot com poucos cliques.
 
-<Frame caption="Visão geral do Menu Principal no Telegram">
+<Frame caption="Visão geral do Menu Principal">
   <img src="/images/bot-main-menu.png" alt="Menu Principal do Bot" />
 </Frame>
 
-## O Painel de Controle
-
-O menu é dividido em quatro pilares fundamentais:
-
-<CardGroup cols={2}>
-  <Card title="Track New Wallet" icon="magnifying-glass-plus">
-    **Onde tudo começa.** Use este botão para adicionar uma nova carteira de investidor à sua lista de monitoramento.
-  </Card>
-  <Card title="Manage Wallets" icon="list-check">
-    **Sua gestão.** Veja a lista de quem você está seguindo, ajuste alertas individuais, pause notificações ou remova carteiras.
-  </Card>
-  <Card title="General Settings" icon="gear">
-    **Ajustes Globais.** Configure como o bot se comporta, altere o idioma e o modo de notificação.
-  </Card>
-  <Card title="Help & Support" icon="life-ring">
-    **Suporte.** Acesso rápido aos tutoriais (PolyTracker Learn) e contato direto com nossa equipe.
-  </Card>
-</CardGroup>
+Abaixo, detalhamos a função de cada botão, na ordem em que você provavelmente os utilizará.
 
 ---
 
-## Configurações Gerais (General Settings)
+## 1. Track New Wallet (Seguir Nova Carteira)
 
-Ao clicar em **General Settings**, você personaliza a experiência de uso do bot. Aqui estão as opções disponíveis:
+É aqui que você inicia o monitoramento de um investidor. Para isso, você precisará do **endereço público** da carteira dele (Address).
 
-### 1. Notification Mode (Modo de Notificação)
+<Steps>
+  <Step title="Obtenha o Endereço">
+    No perfil do investidor dentro do Polymarket, localize e copie o endereço da carteira (geralmente começa com `0x...`).
+    
+    <Frame caption="Onde encontrar o endereço no perfil do Polymarket">
+      <img src="/images/polymarket-copy-address.png" alt="Copiando o endereço" />
+    </Frame>
+  </Step>
 
-Esta é a configuração mais importante. Ela define como o histórico do chat se comporta quando há atualizações em uma posição.
+  <Step title="Cadastre no Bot">
+    Clique no botão **Track New Wallet** e, quando solicitado, envie o endereço que você acabou de copiar.
+  </Step>
+
+  <Step title="Defina um Apelido (Label)">
+    Dê um nome para identificar essa carteira (ex: "Baleia Trump", "Sniper Esportes"). Esse nome aparecerá em todas as notificações futuras.
+  </Step>
+</Steps>
+
+---
+
+## 2. Manage Wallets (Gerenciar Carteiras)
+
+Esta é a sua central de gestão. Ao clicar aqui, você verá a lista de todas as carteiras que está seguindo.
+
+Clicando em **Settings** ao lado de uma carteira específica, você abre o **Painel Individual** daquele investidor, onde tem acesso às ferramentas de controle:
+
+<Frame caption="Painel de Configuração Individual da Carteira">
+  <img src="/images/bot-wallet-settings.png" alt="Configurações da Carteira" />
+</Frame>
+
+### Ferramentas de Gestão Individual
+
+<AccordionGroup>
+  <Accordion title="Positions (Raio-X)" icon="chart-pie">
+    Mostra instantaneamente as **maiores posições abertas** daquele investidor no momento. Ideal para entender rapidamente onde o dinheiro dele está alocado sem precisar esperar uma nova notificação.
+  </Accordion>
+
+  <Accordion title="Pause / Resume" icon="pause">
+    Deseja silenciar um trader temporariamente sem deixar de segui-lo? Use este botão para pausar e retomar os alertas dessa carteira específica.
+  </Accordion>
+
+  <Accordion title="Value & % Threshold (Filtros de Ruído)" icon="filter">
+    **Fundamental para sua estratégia.** Configure gatilhos para ser notificado apenas em movimentos relevantes:
+    
+    * **Value Threshold:** Notificar apenas operações acima de $X (ex: acima de $500).
+    * **% Threshold:** Notificar apenas se a operação representar mais de Y% do portfólio dele (ex: acima de 5% da banca).
+  </Accordion>
+
+  <Accordion title="Rename & Untrack" icon="pen-to-square">
+    * **Rename:** Altere o apelido da carteira.
+    * **Untrack Wallet:** Para de seguir a carteira e a remove da sua lista.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## 3. General Settings (Configurações Gerais)
+
+Aqui você define as preferências globais do seu bot, que se aplicam a todas as notificações.
+
+### Notification Mode (Modo de Notificação)
+Define como o histórico do chat se comporta.
 
 | Modo | Como funciona | Recomendação |
 | :--- | :--- | :--- |
-| **Clean Mode** | Sempre que houver uma atualização em um mercado já notificado, a mensagem antiga é **deletada** e substituída pela nova. | ✅ **Recomendado**<br/>Mantém o chat limpo e focado no preço atual. |
-| **History Mode** | Gera uma **nova mensagem** para cada atualização. Nenhuma mensagem é apagada. | **Auditoria**<br/>Bom para ver o histórico, mas pode poluir o feed visualmente. |
+| **Clean Mode** | Mensagens antigas do mesmo mercado são **apagadas** e substituídas pela atualização mais recente. Mantém o chat limpo. | ✅ **Recomendado** |
+| **History Mode** | Gera uma **nova mensagem** para cada atualização. Nenhuma mensagem é apagada, criando um log histórico completo. | **Auditoria** |
 
-### 2. Ajustes de Localização
-
-* **Change Timezone:** Atualize seu fuso horário a qualquer momento. Essencial para saber se aquela operação foi feita agora ou horas atrás.
-* **Change Language:** Alterne o idioma da interface entre Português e Inglês.
+### Outros Ajustes
+* **Change Timezone:** Ajuste seu fuso horário para que os alertas mostrem a hora correta da sua região.
+* **Change Language:** Alterne o idioma do bot (Português/Inglês).
 
 ---
 
-## Ajuda e Suporte
+## 4. Help & Support
 
-No menu **Help & Support**, você encontra:
-
-* 📚 Link direto para o **PolyTracker Learn** (este guia).
-* 📧 E-mail de contato para suporte técnico ou financeiro.
-
-<Tip>
-  **Dica de Navegação:**
-  Nos próximos tópicos, vamos focar na parte operacional: como usar o **Track New Wallet** e o **Manage Wallets** para montar sua estratégia.
-</Tip>
+Acesso rápido ao suporte:
+* Link direto para o **PolyTracker Learn**.
+* E-mail de contato para suporte técnico.
