@@ -1,112 +1,92 @@
 ---
 title: 'Estratégias e Gestão de Risco'
-description: 'Como usar informação e automação a seu favor com segurança.'
+description: 'Como proteger seu capital e maximizar lucros com inteligência.'
+icon: 'shield-check'
 ---
 
-O PolyTracker foi pensado para usar informação e automação a seu favor, mas o resultado final depende de duas decisões humanas: **quais traders você escolhe** e **como você distribui seu patrimônio**.
+Ter acesso às melhores carteiras do mundo é apenas 50% do caminho. Os outros 50% dependem de como você gerencia o **seu** dinheiro ao seguir essas carteiras.
 
----
+Neste módulo, vamos abordar a **Replicação Proporcional**, a **Leitura de Convicção** e como filtrar o ruído focando na qualidade.
 
-## 1. A Regra de Ouro: Proporção > Valor
+## 1. Replicação Proporcional: A Regra de Ouro
 
-Uma das informações mais valiosas que o PolyTracker entrega é a **porcentagem do patrimônio** que o trader colocou em cada posição.
+O erro número #1 de quem começa a **replicar operações** é tentar copiar o **Valor Financeiro** (USD) em vez de copiar a **Intenção** (%).
 
-<Info>
-  **Mude sua mentalidade:**
-  Ao ver um alerta, nunca pergunte *"Quantos dólares ele colocou?"*.
-  Pergunte sempre: **"Quanto % do patrimônio total dele ele arriscou?"**.
-</Info>
-
-### Por que isso importa?
-A porcentagem é o verdadeiro sinal de convicção (High Conviction).
-* **0.5% – 1%:** Operações exploratórias ou de teste.
-* **3% – 5% – 10%:** Posições relevantes onde o trader tem alta confiança.
-
-### Como aplicar na prática?
-Não copie o valor absoluto. Copie a lógica.
-
-* **Cenário:** O Trader entrou com **3%** do patrimônio dele.
-* **Sua Ação:** Considere entrar com algo próximo de **3%** da *sua* banca (ajustando ao seu perfil de risco).
+Se uma baleia tem um saldo de $1.000.000 e aposta $10.000, ela está arriscando apenas **1%** do capital dela. Se você tem uma banca de $1.000 e tenta copiar os mesmos $10.000 (se tivesse) ou mesmo $500, você estaria arriscando **50%** do seu capital.
 
 <Warning>
-  **Cuidado com a Super Alavancagem:**
-  Se o trader entra com **2%** e você entra com **20%** da sua banca na mesma operação, você **não** está copiando a estratégia. Você está assumindo um risco 10x maior.
-  Multiplicar o risco além do que o trader assume é a receita para quebrar a banca no longo prazo.
+  **Nunca olhe para o valor absoluto ($). Olhe para a proporção.**
+  
+  Sua entrada deve ser baseada no tamanho do **seu** portfólio.
+  
+  * **Baleia:** Entrou com 5% do portfólio dela (Alta convicção).
+  * **Você:** Deve entrar com 2% a 5% do **seu** portfólio (sua gestão deve ser mais conservadora).
 </Warning>
 
-<Frame caption="Notificação destacando a % do patrimônio usada na operação">
-  <img src="/images/notification-highlight-percent.png" alt="Alerta com Porcentagem" />
-</Frame>
+### Definindo sua Unidade (Stake)
+Para simplificar, sugerimos trabalhar com unidades fixas ou variáveis limitadas:
 
----
+| Perfil | Sugestão de Entrada por Operação |
+| :--- | :--- |
+| **Conservador** | 1% do seu capital total |
+| **Moderado** | 2% a 3% do seu capital total |
+| **Agressivo** | Máximo de 5% (Não recomendado para iniciantes) |
 
-## 2. PolyTracker Radar: O Filtro de Qualidade
+## 2. Avaliando a Convicção do Investidor
 
-Replicar bons investidores começa por escolher bem quem seguir. É aqui que entra o **PolyTracker Radar**.
-
-Nossa equipe e analistas auditam diariamente as carteiras do Polymarket para entregar um filtro inicial de qualidade.
+Antes de operar, faça uma leitura rápida do "Fluxo de Decisão". O PolyTracker te dá os dados, você interpreta o sentimento. Como saber se a baleia está confiante ou apenas "brincando"?
 
 <CardGroup cols={2}>
-  <Card title="Histórico Comprovado" icon="clock-rotate-left">
-    Analisamos a consistência dos resultados ao longo do tempo, não apenas um "tiro de sorte".
+  <Card title="Porcentagem da Banca" icon="chart-pie">
+    Se a baleia alocou uma % alta do patrimônio dela nessa operação, a convicção é alta. Se for um valor irrisório (0.1%), pode ser apenas um teste ou *hedge*.
   </Card>
-  <Card title="Estilo de Operação" icon="chess">
-    Identificamos se é um trader agressivo, conservador, focado em Política ou Esportes.
+  <Card title="Recompra (Buy)" icon="layer-group">
+    Se a baleia já tinha uma posição e comprou mais (`Buy`) mesmo com o preço subindo ou descendo, isso mostra que ela mantém a tese forte.
   </Card>
-</CardGroup>
-
-<Frame caption="Blog do Radar com análises detalhadas de carteiras">
-  <img src="/images/radar-blog-view.png" alt="Interface do Radar" />
-</Frame>
-
----
-
-## 3. O Fluxo Perfeito: Do Radar ao Bot
-
-Como usar as duas ferramentas em conjunto para tomar decisões melhores:
-
-<Steps>
-  <Step title="Consulte o Radar">
-    Abra o PolyTracker Radar e veja a "Carteira do Dia". Analise se o perfil combina com você (Horizonte de tempo, volatilidade, nicho).
-  </Step>
-  <Step title="Siga no Bot">
-    Fez sentido? Copie o endereço da carteira, vá no Telegram e use o comando `/seguir`. Dê um nome fácil de identificar (Ex: *Radar - Baleia Política*).
-  </Step>
-  <Step title="Decisão Humana">
-    Use as notificações como ferramenta de decisão. **Não é para clicar 'comprar' em tudo automaticamente.** É para entender o comportamento do trader e escolher o melhor momento de entrar.
-  </Step>
-</Steps>
-
----
-
-## 4. Boas Práticas (Mandamentos)
-
-Para sobreviver e lucrar no longo prazo, siga estes princípios:
-
-<CardGroup cols={1}>
-  <Card title="1. Defina sua Banca" icon="sack-dollar">
-    Separe um valor específico para o Polymarket. Nunca use dinheiro que você não pode perder (dinheiro do aluguel ou contas essenciais).
+  <Card title="Hold Time" icon="clock">
+    Carteiras que seguram posições por mais tempo geralmente têm teses fundamentadas. Carteiras que compram e vendem em minutos são especulativas (mais arriscadas).
   </Card>
-  <Card title="2. Limite por Operação" icon="scale-balanced">
-    Defina um teto. Exemplo: "Nunca colocarei mais de 5% da minha banca em uma única aposta", não importa quão boa ela pareça.
-  </Card>
-  <Card title="3. Diversificação de Traders" icon="users">
-    Não coloque todo o seu capital seguindo apenas uma pessoa. Mesmo os melhores erram. Siga 2 ou 3 perfis diferentes para balancear os riscos.
-  </Card>
-  <Card title="4. Aceite o Erro" icon="shield-heart">
-    A gestão de risco serve para garantir que um erro isolado não destrua sua banca. Perdas acontecem; o importante é que os ganhos sejam maiores no final.
+  <Card title="Frequência" icon="bolt">
+    Cuidado com carteiras que entram em 50 mercados por dia. Elas diluem o acerto. Prefira aquelas que "atiram pouco, mas atiram certo".
   </Card>
 </CardGroup>
 
----
+## 3. Qualidade > Quantidade
 
-## ⚠️ Aviso Legal (Disclaimer)
+No entusiasmo inicial, é comum querer seguir 10, 20 ou 30 carteiras diferentes. **Isso é uma armadilha.**
 
-<Warning>
-  **Não é recomendação de investimento.**
+Ao tentar monitorar muitos investidores:
+1.  Seu capital se pulveriza em muitas operações pequenas.
+2.  Você perde o controle emocional.
+3.  As perdas de carteiras ruins anulam os ganhos das boas.
+
+<Tip>
+  **A Estratégia do "Dream Team":**
   
-  O PolyTracker Radar e o Bot são ferramentas de análise e monitoramento baseadas em dados públicos.
-  * O Polymarket é um ambiente de renda variável. **Não há garantia de lucro.**
-  * O desempenho passado de uma carteira **não garante** resultados futuros.
-  * As decisões de quanto investir, quando entrar e quando sair são de total responsabilidade do usuário.
-</Warning>
+  Escolha **3 a 5 investidores consistentes** para monitorar de perto. É melhor perder uma oportunidade de uma carteira desconhecida do que perder dinheiro seguindo a multidão.
+</Tip>
+
+## 4. O Círculo de Competência
+
+Só porque uma Smart Wallet entrou em um mercado, não significa que você deva entrar cegamente, especialmente se for um assunto que você desconhece totalmente.
+
+* **Exemplo:** A baleia aposta pesado em *Cricket Indiano*. Você entende as regras? Sabe se choveu no estádio? Sabe se o time está desfalcado?
+* **Ação:** Se você não entende o mercado, a aposta da baleia é apenas um dado, não uma garantia.
+
+**Priorize mercados onde você tem familiaridade (Política, Crypto, Tech, Futebol, etc).** Isso permite que você valide a tese da baleia com seu próprio conhecimento, criando uma dupla camada de segurança.
+
+## 5. Diversificação Inteligente
+
+Mesmo seguindo os melhores, o cisne negro (evento imprevisível) pode acontecer.
+
+* Não coloque todo seu capital em um único evento (ex: Eleições EUA).
+* Não coloque todo seu capital replicando apenas uma única baleia.
+* Tente manter posições em categorias diferentes (ex: Uma parte em Política, outra em Economia/Crypto).
+
+---
+
+**Resumo do Gestor:**
+1.  Respeite o tamanho do **seu** bolso (Proporcionalidade).
+2.  Avalie a convicção da baleia (% da banca dela).
+3.  Siga poucos e bons (Consistência).
+4.  Opere o que você entende (Competência).
