@@ -1,106 +1,107 @@
 ---
-title: 'Como funciona o Order Book'
-description: 'Veja o que está por trás do preço: quem está comprando e quem está vendendo.'
+title: 'How the Order Book Works'
+description: 'See what lies behind the price: who is buying and who is selling.'
+icon: 'list-ol'
 ---
 
-Até aqui, você já sabe:
+By now, you already know how to:
 
-1. Criar conta
-2. Depositar USDC
-3. Ler as odds (preço = probabilidade)
+1. Create an account
+2. Deposit USDC
+3. Read the odds (price = probability)
 
-Agora falta entender **o que sustenta esses preços**: o **Order Book** (Livro de Ofertas).
+Now you need to understand **what drives these prices**: the **Order Book**.
 
 ---
 
-## 1. O que é o Order Book?
+## 1. What is the Order Book?
 
-O **Order Book** é uma tabela que mostra, em tempo real:
+The **Order Book** is a table that displays, in real-time:
 
-* Quem quer **comprar** (bids) → preço e tamanho
-* Quem quer **vender** (asks) → preço e tamanho
+* Who wants to **buy** (bids) → price and size
+* Who wants to **sell** (asks) → price and size
 
-É ele que responde:
+It answers questions like:
 
-* Qual o melhor preço que alguém paga agora?
-* Qual o melhor preço que alguém vende agora?
-* Quanto dinheiro existe em cada nível de preço?
+* What is the best price someone is paying right now?
+* What is the best price someone is selling for right now?
+* How much money exists at each price level?
 
-<Frame caption="Exemplo de Order Book com níveis de compra (bids) e venda (asks).">
-  <img src="/images/orderbook-example.png" alt="Exemplo de Order Book" />
+<Frame caption="Example of an Order Book with buy levels (bids) and sell levels (asks).">
+  <img src="/images/orderbook-example.png" alt="Order Book Example" />
 </Frame>
 
-> Em resumo: o Order Book é o **mapa de oferta e demanda** daquele mercado.
+> In short: the Order Book is the **map of supply and demand** for that specific market.
 
 ---
 
 ## 2. Market Order vs. Limit Order
 
-Quando você clica em **Buy** ou **Sell**, você está escolhendo entre dois modos de execução. Entender a diferença te economiza dinheiro.
+When you click **Buy** or **Sell**, you are choosing between two execution modes. Understanding the difference saves you money.
 
 <CardGroup cols={2}>
-  <Card title="Market Order (Mercado)" icon="bolt" color="#22c55e">
-    - Executa **imediatamente**.
-    - Você aceita pagar o preço que o mercado está pedindo agora.
-    - **Vantagem:** Velocidade (garante que entra).
-    - **Risco:** Pode pagar um pouco mais caro se o preço pular.
+  <Card title="Market Order" icon="bolt" color="#22c55e">
+    - Executes **immediately**.
+    - You accept the price the market is asking right now.
+    - **Advantage:** Speed (guaranteed execution).
+    - **Risk:** You might pay slightly more if the price jumps.
   </Card>
 
-  <Card title="Limit Order (Limitada)" icon="flag" color="#3b82f6">
-    - Executa apenas no **seu preço** (ou melhor).
-    - Você define: "Só pago $0.50". Se o preço estiver $0.51, a ordem não executa.
-    - **Vantagem:** Controle total do preço.
-    - **Risco:** Ficar de fora se o mercado não voltar ao seu preço.
+  <Card title="Limit Order" icon="flag" color="#3b82f6">
+    - Executes only at **your price** (or better).
+    - You define: "I will only pay $0.50". If the price is $0.51, the order does not execute.
+    - **Advantage:** Total price control.
+    - **Risk:** Being left out if the market doesn't come back to your price.
   </Card>
 </CardGroup>
 
 <Note>
-  **Resumo:**
-  **Market Order** = "Quero entrar agora, não importa o preço exato."
-  **Limit Order** = "Quero entrar neste preço exato, posso esperar."
+  **Summary:**
+  **Market Order** = "I want in now, I don't care about the exact cent."
+  **Limit Order** = "I want in at this exact price, I can wait."
 </Note>
 
 ---
 
-## 3. Profundidade e Slippage
+## 3. Depth and Slippage
 
-Além do melhor preço, o Order Book mostra **quanto** dinheiro existe em cada nível.
+Beyond the best price, the Order Book shows **how much** money exists at each level.
 
-* Se sua ordem for **pequena** (ex: $10), ela é executada inteira no melhor preço.
-* Se sua ordem for **grande** (ex: $5.000), ela pode "consumir" o primeiro nível de preço e começar a comprar os níveis mais caros.
+* If your order is **small** (e.g., $10), it usually fills entirely at the best price.
+* If your order is **large** (e.g., $5,000), it might "eat through" the first price level and start buying from more expensive levels.
 
-Isso se chama **Slippage** (Deslizamento):
-Você vê o preço a $0.50, mas como comprou muita quantidade, seu preço médio final ficou em $0.53.
+This is called **Slippage**:
+You see the price at $0.50, but because you bought such a large quantity, your final average entry price ended up at $0.53.
 
 <Warning>
-  **Cuidado com ordens grandes:**
-  Antes de operar valores altos, sempre olhe a **quantidade disponível** nos primeiros níveis do livro para não mover o preço contra você mesmo.
+  **Watch out for large orders:**
+  Before trading high values, always check the **available quantity** in the first few levels of the book so you don't move the price against yourself.
 </Warning>
 
 ---
 
-## 4. Checklist do Order Book
+## 4. Order Book Checklist
 
-Antes de clicar no botão, faça essa verificação rápida:
+Before clicking the button, do this quick check:
 
 <CardGroup cols={1}>
-  <Card title="Spread (Diferença)" icon="arrows-left-right">
-    Verifique a diferença entre o melhor comprador e o melhor vendedor. Se a diferença for grande (ex: $0.40 vs $0.60), evite ordens a mercado.
+  <Card title="Spread ( The Gap)" icon="arrows-left-right">
+    Check the difference between the best buyer and the best seller. If the gap is wide (e.g., $0.40 vs $0.60), avoid Market Orders.
   </Card>
-  <Card title="Liquidez" icon="layer-group">
-    Existe quantidade suficiente no preço atual para cobrir o valor da sua aposta?
+  <Card title="Liquidity" icon="layer-group">
+    Is there enough quantity at the current price to cover your trade size?
   </Card>
-  <Card title="Tipo de Ordem" icon="hand-pointer">
-    Para valores altos, prefira **Limit Order**. Para valores baixos ou pressa, use **Market Order**.
+  <Card title="Order Type" icon="hand-pointer">
+    For large amounts, prefer **Limit Order**. For small amounts or urgency, use **Market Order**.
   </Card>
 </CardGroup>
 
 ---
 
-## Próximo passo
+## Next Step
 
-Agora que você domina a mecânica do preço, chegou a hora da verdade. Vamos realizar sua primeira compra na prática.
+Now that you've mastered price mechanics, it's time for the real deal. Let's make your first purchase.
 
-<Card title="Sua Primeira Operação" icon="play" href="/learn/first-operation">
-  Passo a passo para abrir sua primeira posição no Polymarket.
+<Card title="Your First Trade" icon="play" href="/learn/first-operation">
+  Step-by-step guide to opening your first position on Polymarket.
 </Card>

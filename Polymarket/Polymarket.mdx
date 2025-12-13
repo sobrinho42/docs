@@ -1,129 +1,129 @@
 ---
-title: 'O que é Polymarket?'
-description: 'Entenda como funciona o maior mercado de predição do mundo.'
+title: 'What is Polymarket?'
+description: 'Understand how the world’s largest prediction market works.'
 ---
 
-O **Polymarket** é o maior *prediction market* (mercado de predição) do mundo — uma plataforma onde você compra e vende ações (*shares*) que representam o resultado de eventos reais.
+**Polymarket** is the world's largest *prediction market*—a platform where you buy and sell shares that represent the outcome of real-world events.
 
-Em vez de depender de palpites, notícias soltas ou odds definidas por uma casa de apostas, o Polymarket transforma informação em preço: **os valores das shares refletem em tempo real aquilo que o mercado inteiro acredita que vai acontecer.**
+Instead of relying on guesses, random news cycles, or odds set by a bookmaker, Polymarket turns information into price: **share values reflect in real-time what the entire market believes will happen.**
 
-<Frame caption="Vídeo Introdutório (Créditos: Canal Crypto Gorilla)">
+<Frame caption="Introductory Video (Credits: Crypto Gorilla Channel)">
   <iframe
     width="100%"
     height="400"
     src="https://www.youtube.com/embed/f0fLy5DhcYY?start=50&end=145&controls=1&modestbranding=1&rel=0"
-    title="O que é Polymarket"
+    title="What is Polymarket"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
     style={{ borderRadius: "8px" }}
   />
 </Frame>
-<Note>Este conteúdo foi produzido pelo canal **Crypto Gorilla** e serve apenas para fins educacionais.</Note>
+<Note>This content was produced by the **Crypto Gorilla** channel and is for educational purposes only.</Note>
 
-## Casas de Apostas vs. Prediction Market
+## Sportsbooks vs. Prediction Markets
 
-A principal diferença está em **quem está do outro lado** da sua operação.
+The main difference lies in **who is on the other side** of your trade.
 
 <CardGroup cols={2}>
-  <Card title="Casa de Apostas Tradicional" icon="circle-xmark" color="#ef4444">
-    - **Você aposta contra a casa.**
-    - A empresa define as odds com margem de lucro para ela.
-    - Se você ganha muito, eles podem limitar sua conta.
-    - Falta de transparência nos dados.
+  <Card title="Traditional Sportsbook" icon="circle-xmark" color="#ef4444">
+    - **You bet against the house.**
+    - The company sets the odds with a built-in profit margin (vig).
+    - If you win too much, they can limit or ban your account.
+    - Lack of data transparency.
   </Card>
   <Card title="Polymarket" icon="chart-network" color="#3b82f6">
-    - **Você negocia com outros usuários.**
-    - Os preços nascem da oferta e demanda real (P2P).
-    - **Sem limites:** A plataforma não lucra com sua perda.
-    - Tudo é registrado de forma transparente.
+    - **You trade against other users.**
+    - Prices are born from real supply and demand (P2P).
+    - **No limits:** The platform doesn't profit from your loss.
+    - Everything is transparently recorded.
   </Card>
 </CardGroup>
 
-> É a lógica do mercado financeiro aplicada a eventos: em vez de uma banca definindo cotações, é o conjunto de traders (o mercado) que define o preço justo.
+> It is financial market logic applied to events: instead of a bookie setting lines, the collective set of traders (the market) defines the fair price.
 
 ---
 
-## Liberdade (Liquidez)
+## Freedom (Liquidity)
 
-Na aposta tradicional, você costuma ficar "preso" até o apito final. No Polymarket, você tem liquidez para entrar e sair a qualquer momento.
+In traditional betting, you are usually "locked in" until the final whistle. On Polymarket, you have the liquidity to enter and exit at any time.
 
 <CardGroup cols={1}>
-  <Card title="Travar lucro antecipado" icon="piggy-bank">
-    Comprou barato e o preço subiu? Venda e embolse o lucro, não precisa esperar o evento acabar.
+  <Card title="Lock in profit early" icon="piggy-bank">
+    Bought low and the price went up? Sell and pocket the profit—no need to wait for the event to end.
   </Card>
-  <Card title="Estancar prejuízo (Stop Loss)" icon="shield-halved">
-    O cenário piorou? Venda suas shares e recupere parte do capital antes que vá a zero.
+  <Card title="Stop Loss" icon="shield-halved">
+    Scenario looking bad? Sell your shares and recover part of your capital before it goes to zero.
   </Card>
-  <Card title="Reação Imediata" icon="bolt">
-    Saiu uma notícia nova? Ajuste sua posição no mesmo segundo.
+  <Card title="Immediate Reaction" icon="bolt">
+    Breaking news just dropped? Adjust your position the very same second.
   </Card>
 </CardGroup>
 
 ---
 
-## Transparência e Dados Públicos
+## Transparency and On-Chain Data
 
-Um dos pilares do Polymarket é que todas as operações são registradas na Blockchain (Polygon). Qualquer pessoa pode auditar carteiras, históricos e volumes.
+One of Polymarket's pillars is that all operations are recorded on the Blockchain (Polygon). Anyone can audit wallets, histories, and volumes.
 
-<Frame caption="Exemplo: No PolyTracker, usamos esses dados públicos para filtrar quem é vencedor de verdade.">
-  <img src="/images/trader-pnl-example.png" alt="Gráfico de PnL de carteira consistente" />
+<Frame caption="Example: At PolyTracker, we use this public data to filter who the real winners are.">
+  <img src="/images/trader-pnl-example.png" alt="PnL Chart of a consistent wallet" />
 </Frame>
 
 ---
 
-## Como funciona na prática
+## How it works in practice
 
-Para entender a dinâmica de preços, vamos analisar um exemplo de mercado real.
+To understand price dynamics, let's analyze a real market example.
 
-### Exemplo: "Trump será eleito?"
+### Example: "Will Trump win the election?"
 
-Neste mercado, existem ações de **YES** e **NO**. Imagine que as shares de `YES` estão custando **$0.62**.
+In this market, there are **YES** and **NO** shares. Imagine that `YES` shares are trading at **$0.62**.
 
 <Info>
-  **A Matemática:** O preço de $0.62 indica que o mercado atribui **62% de probabilidade** de vitória.
+  **The Math:** A price of $0.62 indicates the market assigns a **62% probability** of victory.
 </Info>
 
-1.  Se você acredita que a chance real é maior que 62%, você compra o `YES`.
-2.  **Se o evento acontece (Trump vence):** Cada share vira **$1.00**.
-3.  **Se o evento não acontece:** A share vira **$0.00**.
+1.  If you believe the real chance is higher than 62%, you buy `YES`.
+2.  **If the event happens (Trump wins):** Each share becomes worth **$1.00**.
+3.  **If the event does not happen:** The share becomes worth **$0.00**.
 
-### O Trading (Não espere o fim)
+### The Trading (Don't wait for the end)
 
-Suponha que, no dia seguinte à sua compra, saia uma pesquisa favorável e o preço do `YES` suba para **$0.78**.
+Suppose that the day after your purchase, a favorable poll comes out and the price of `YES` rises to **$0.78**.
 
-Você **não** é obrigado a esperar a eleição. Você pode vender suas shares a $0.78 agora mesmo, realizando o lucro baseado apenas na volatilidade da notícia.
+You are **not** obligated to wait for the election. You can sell your shares at $0.78 right now, realizing profit based solely on the volatility of the news.
 
 ---
 
-## Como os preços são formados
+## How prices are formed
 
-As shares sempre flutuam entre **$0.00 e $1.00**. Esse valor é a tradução direta da probabilidade:
+Shares always fluctuate between **$0.00 and $1.00**. This value is the direct translation of probability:
 
-* **$0.18** = 18% de chance
-* **$0.51** = 51% de chance
-* **$0.92** = 92% de chance
+* **$0.18** = 18% chance
+* **$0.51** = 51% chance
+* **$0.92** = 92% chance
 
 <Warning>
-  O Polymarket **não define** esses preços. Eles são o resultado do que compradores e vendedores (como você e as Baleias) estão negociando naquele momento.
+  Polymarket **does not define** these prices. They are the result of what buyers and sellers (like you and the Whales) are negotiating at that moment.
 </Warning>
 
-É um ambiente de incentivos claros: **quem tem a melhor informação, lucra.**
+It is an environment of clear incentives: **those with the best information profit.**
 
 ---
 
-## Próximos Passos
+## Next Steps
 
-Agora que você entendeu o conceito, vamos preparar suas ferramentas.
+Now that you understand the concept, let's set up your tools.
 
 <Steps>
-  <Step title="Criar Conta">
-    Aprenda a criar sua conta usando apenas seu e-mail ou Carteira Digital.
+  <Step title="Create Account">
+    Learn how to create your account using just your email or a Digital Wallet.
   </Step>
-  <Step title="Depositar (Funding)">
-    Como colocar dólares (USDC) na plataforma para começar a operar.
+  <Step title="Deposit (Funding)">
+    How to onboard USDC onto the platform to start trading.
   </Step>
-  <Step title="Interpretar o Mercado">
-    Como ler as odds e o Order Book com segurança.
+  <Step title="Interpret the Market">
+    How to read the odds and the Order Book safely.
   </Step>
 </Steps>
