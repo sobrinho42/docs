@@ -1,117 +1,262 @@
 ---
-title: 'Notificações'
-description: 'Aprenda a ler os alertas: entradas, aumentos, reduções e saídas.'
+title: 'Tipos de notificações do PolyTracker Bot'
+description: 'Entenda o que significa cada tipo de alerta enviado pelo PolyTracker Bot e quais informações observar em cada um.'
 ---
 
-O PolyTracker Bot envia 4 tipos distintos de notificação. Cada um conta uma parte da história da operação.
+# Tipos de notificações do PolyTracker Bot
 
-1.  🆕  **Nova Posição** (Entrada)
-2.  📈 ** Posição Atualizada - Compra** (Aumento da posição)
-3.  📉 ** Posição Atualizada - Venda** (Redução parcial)
-4.  ✅  **Posição Encerrada** (Saída total)
+O PolyTracker Bot envia notificações estruturadas sempre que uma carteira que você segue realiza uma operação relevante no Polymarket.
+
+Atualmente, você encontrará **seis tipos principais de notificações**:
+
+1. **New Position**
+2. **Position Updated – Buy**
+3. **Position Updated – Sell**
+4. **Position Closed – Sold**
+5. **Position Closed – Redeem (Won)**
+6. **Position Closed – Redeem (Lost)**
+
+Cada tipo mostra um momento diferente do ciclo da posição: entrada, ajuste, realização parcial e encerramento.
 
 ---
 
-## O Básico: O que todo alerta mostra
+## New Position
 
-Independente do tipo, toda notificação traz o "DNA" da operação:
+A notificação **New Position** aparece quando o trader entra em um mercado em que **não tinha nenhuma posição prévia**.
 
-<Card title="Dados Base" icon="fingerprint" color="#5D6B81">
-  * **Carteira:** O nome/apelido do trader que você está seguindo.
-  * **Mercado:** O link clicável para a pergunta no Polymarket.
-  * **Lado:** Se a aposta é no **YES** ou **NO**.
-  * **Quantidade:** Quantos shares/dólares foram movimentados agora.
-</Card>
+Em outras palavras: é a **primeira vez** que ele compra shares naquele mercado.
 
-<Frame caption="Exemplo padrão: Carteira, Mercado e Lado identificados">
-  <img src="/images/notification-base-example.png" alt="Exemplo de Notificação Base" />
+Campos principais:
+
+- **Wallet** – nome/label da carteira (como você cadastrou no bot).
+- **Market** – pergunta do Polymarket (sempre com link clicável para o mercado).
+- **Outcome** – lado escolhido:
+  - `YES` / `NO`; ou  
+  - o nome do time / lado específico, em mercados esportivos ou de múltipla escolha.
+- **Shares** – quantidade de shares comprados.
+- **Position Details**:
+  - **Average Price** – preço médio pago por share nessa entrada.
+  - **Value** – valor total investido nessa nova posição.
+  - **(% of portfolio)** – qual porcentagem do patrimônio total da carteira essa posição representa.
+- **Time** – horário em que a operação foi executada.
+
+<Frame caption="Exemplo de notificação New Position">
+  <img src="/images/notifications/new-position.png" alt="Notificação New Position" />
 </Frame>
 
+**O que observar aqui:**
+
+- **Outcome** – certifica qual lado ele escolheu.  
+- **Value + % of portfolio** – indicam o tamanho da convicção do trader:
+  - entradas com % muito baixa tendem a ser mais “testes”;  
+  - entradas com % maior indicam mais relevância dentro do portfólio.
+
 ---
 
-## 1. Nova Posição (Entrada)
+## Position Updated – Sell (redução parcial)
 
-Aparece quando o trader entra em um mercado onde ele estava zerado. É o início da convicção.
+A notificação **Position Updated – Sell** aparece quando o trader **vende parte** de uma posição que já estava aberta (redução parcial, não encerramento total).
 
-* **O que significa:** "O Trader X acabou de abrir uma aposta aqui."
-* **Dados extras:** Preço médio da entrada e Valor Total investido.
+Campos principais:
 
-<Frame caption="Alerta de Nova Posição: O início do trade">
-  <img src="/images/notification-new-position.png" alt="Nova Posição" />
+- **Wallet**  
+- **Market**  
+- **Outcome**  
+- **Shares** – mostram três dados:
+  - quantidade anterior  
+  - quantidade atual  
+  - e, entre parênteses, quantos shares foram vendidos  
+  - exemplo: `142.000 → 137.000 (-5.000)`
+
+Em seguida, a notificação é dividida em dois blocos:
+
+### Sell Details
+
+- **Average Price** – preço médio da venda realizada nessa operação.  
+- **Value** – valor total da venda (em dólares).  
+- **(% of portfolio)** – qual porcentagem do patrimônio total da carteira essa venda movimentou.
+
+### Position Left
+
+- **Average Price** – preço médio da posição que ainda restou.  
+- **Value** – valor total da posição restante.  
+- **(% of portfolio)** – porcentagem do portfólio ainda alocada nesse mercado.  
+- **Open PnL** – lucro ou prejuízo **em aberto** na posição que continua ativa.
+
+No final, você ainda vê o **Time** da operação.
+
+<Frame caption="Exemplo de notificação Position Updated – Sell">
+  <img src="/images/notifications/position-updated-sell.png" alt="Notificação Position Updated Sell" />
 </Frame>
 
+**O que observar aqui:**
+
+- **Quanto foi reduzido** (shares anteriores → atuais).  
+- **Sell Details** – quanto ele de fato realizou em dinheiro.  
+- **Position Left + Open PnL** – quanto continua exposto e se ainda está ganhando ou perdendo na posição restante.
+
 ---
 
-## 2. Posição Atualizada - Compra (Aumento)
+## Position Updated – Buy (aumento de posição)
 
-Aparece quando o trader já tinha uma posição e decide **comprar mais**. Isso geralmente indica alta convicção ou defesa de preço médio.
+A notificação **Position Updated – Buy** aparece quando o trader **aumenta** uma posição já existente (compra mais shares do mesmo mercado e outcome).
 
-O bot divide a informação em dois blocos para clareza:
+Campos principais:
 
-<CardGroup cols={2}>
-  <Card title="A Compra de Agora" icon="cart-plus" color="#10b981">
-    * Preço pago nesta compra específica.
-    * Valor em dólares adicionado agora.
-  </Card>
-  <Card title="A Posição Total" icon="sack-dollar" color="#3b82f6">
-    * **Novo Preço Médio Geral.**
-    * Novo valor total acumulado no mercado.
-  </Card>
-</CardGroup>
+- **Wallet**  
+- **Market**  
+- **Outcome**  
+- **Shares** – mostram:
+  - quantidade anterior  
+  - quantidade atual  
+  - e, entre parênteses, quantos shares foram adicionados  
+  - exemplo: `50.000 → 75.000 (+25.000)`
 
-<Frame caption="Alerta de Aumento: Detalhes da compra vs. Total atualizado">
-  <img src="/images/notification-update-buy.png" alt="Aumento de Posição" />
+Blocos principais:
+
+### Buy Details
+
+- **Average Price** – preço médio dessa compra específica (apenas desta nova entrada).  
+- **Value** – valor total da compra (em dólares).
+
+### Total Position
+
+- **Average Price** – novo preço médio geral da posição, após somar o que já tinha com o que acabou de comprar.  
+- **Value** – valor total atual da posição.  
+- **(% of portfolio)** – porcentagem atual do patrimônio da carteira alocada nesse mercado.
+
+<Frame caption="Exemplo de notificação Position Updated – Buy">
+  <img src="/images/notifications/position-updated-buy.png" alt="Notificação Position Updated Buy" />
 </Frame>
 
+**O que observar aqui:**
+
+- **Se ele está reforçando a posição** (aumento relevante em shares e % do portfólio).  
+- **Novo Average Price** – se a posição ficou mais cara ou mais barata em média.  
+- **Total Position (% of portfolio)** – se o mercado virou uma posição central dentro do portfólio.
+
 ---
 
-## 3. Posição Atualizada - Venda (Redução)
+## Position Closed – Sold (encerramento antes da resolução)
 
-Aparece quando o trader vende apenas **uma parte** das ações. Geralmente indica realização de lucros parciais (colocar dinheiro no bolso) ou redução de risco.
+A notificação **Position Closed – Sold** aparece quando o trader **vende 100% dos shares** de um mercado **antes** do mercado ser resolvido.
 
-<CardGroup cols={2}>
-  <Card title="A Venda Realizada" icon="money-bill-transfer" color="#f59e0b">
-    * Quantidade vendida agora.
-    * Preço médio de saída.
-    * Valor recuperado (Cash out).
-  </Card>
-  <Card title="O que sobrou" icon="chart-pie" color="#64748b">
-    * Novo preço médio da posição restante.
-    * Valor que ainda continua em jogo.
-  </Card>
-</CardGroup>
+Campos principais:
 
-<Frame caption="Alerta de Redução: Venda parcial vs. Saldo restante">
-  <img src="/images/notification-update-sell.png" alt="Redução de Posição" />
+- **Wallet**  
+- **Market**  
+- **Outcome**  
+- **Shares** – quantidade total que foi vendida (posição zerada).
+
+Bloco principal:
+
+### Exit Details
+
+- **Entry Price** – preço médio de entrada da posição.  
+- **Exit Price** – preço médio de saída (venda) da posição.  
+- **Value** – valor total da saída (quanto ele de fato realizou em USDC).  
+- **PnL** – resultado final:
+  - **ícone/bolinha verde** quando há lucro;  
+  - **ícone/bolinha vermelha** quando há prejuízo;  
+  - valor do lucro/prejuízo em dólares;  
+  - e, entre parênteses, a **porcentagem de ganho ou perda** em relação ao valor investido.
+
+Ao final, aparece o **Time** da operação.
+
+<Frame caption="Exemplo de notificação Position Closed – Sold">
+  <img src="/images/notifications/position-closed-sold.png" alt="Notificação Position Closed Sold" />
 </Frame>
 
+**O que observar aqui:**
+
+- **Se ele saiu com lucro ou prejuízo** (PnL).  
+- Diferença entre **Entry Price** e **Exit Price**.  
+- **% de retorno** – qual foi o tamanho do ganho ou perda em termos relativos.
+
 ---
 
-## 4. Posição Encerrada (Saída)
+## Position Closed – Redeem (Won)
 
-Aparece quando o trader vende **100%** das ações ou o mercado é resolvido. É o fim da linha para aquela operação.
+A notificação **Position Closed – Redeem (Won)** aparece quando:
 
-* **O Foco:** Resultado Financeiro.
-* **Métrica Principal:** **PnL (Profit and Loss)**. O bot destaca claramente se o trader saiu com Lucro ou Prejuízo total naquela operação.
+- o mercado foi **resolvido** a favor da posição do trader;  
+- e ele **resgata** o valor (redeem) após a resolução.
 
-<Frame caption="Alerta de Encerramento: Destaque para o PnL final">
-  <img src="/images/notification-closed.png" alt="Posição Encerrada" />
+Campos principais:
+
+- **Wallet**  
+- **Market**  
+- **Outcome**  
+- **Shares** – quantidade de shares que foram resolvidos a favor dele.
+
+Bloco principal:
+
+### Redeem Details
+
+- **Entry Price** – preço médio pago nas entradas.  
+- **Exit Price** – valor recebido por share na resolução (em mercados binários vencedores, costuma ser próximo de `1,00`).  
+- **Value** – valor total resgatado.  
+- **PnL** – lucro obtido nessa operação, com:
+  - valor em dólares;  
+  - porcentagem de retorno;  
+  - com indicação visual de resultado positivo.
+
+<Frame caption="Exemplo de notificação Position Closed – Redeem (Won)">
+  <img src="/images/notifications/position-closed-redeem-won.png" alt="Notificação Position Closed Redeem Won" />
 </Frame>
 
+**O que observar aqui:**
+
+- Lucro final quando o cenário apostado **realmente aconteceu**.  
+- Quanto o trader ganhou **no encerramento por resolução**, não por venda antecipada.
+
 ---
 
-## Resumo do Ciclo
+## Position Closed – Redeem (Lost)
 
-Ao acompanhar essas notificações em sequência, você tem o filme completo:
+A notificação **Position Closed – Redeem (Lost)** aparece quando:
 
-<Steps>
-  <Step title="Entrada" icon="star">
-    Alerta de **Nova Posição**. Você analisa e decide se entra junto.
-  </Step>
-  <Step title="Gestão" icon="sliders">
-    Alertas de **Atualização**. Você vê se ele está aumentando a mão (confiança) ou reduzindo (proteção).
-  </Step>
-  <Step title="Saída" icon="flag-checkered">
-    Alerta de **Posição Encerrada**. Hora de apurar o lucro e partir para a próxima.
-  </Step>
-</Steps>
+- o mercado foi resolvido **contra** a posição do trader;  
+- as shares viram pó (não valem mais nada).
+
+Campos principais:
+
+- **Wallet**  
+- **Market**  
+- **Outcome**  
+- **Shares** – quantidade de shares que **foram liquidados em 0**.
+
+Bloco principal:
+
+### Redeem Details
+
+- **Entry Price** – preço médio que ele pagou pelos shares.  
+- **Exit Price** – preço final recebido na resolução (em mercados binários perdedores, geralmente `0`).  
+- **Value** – valor total após a resolução (tipicamente `0`).  
+- **PnL** – prejuízo:
+  - valor em dólares negativo;  
+  - **-100%** de retorno, quando perdeu tudo que colocou na posição.
+
+<Frame caption="Exemplo de notificação Position Closed – Redeem (Lost)">
+  <img src="/images/notifications/position-closed-redeem-lost.png" alt="Notificação Position Closed Redeem Lost" />
+</Frame>
+
+**O que observar aqui:**
+
+- É a situação em que a aposta **não deu certo** e o trader perdeu todo o valor investido naquele mercado.  
+- Serve como lembrete importante de que se trata de **renda variável**, com risco real de perda total na posição.
+
+---
+
+## Como usar essas notificações na prática
+
+De forma resumida:
+
+- Use **New Position** e **Position Updated – Buy** para identificar **entradas e aumentos** que podem fazer sentido para você acompanhar.  
+- Use **Position Updated – Sell** e **Position Closed – Sold** para avaliar **reduções e saídas antecipadas**.  
+- Use **Position Closed – Redeem (Won/Lost)** para entender **como aquela história terminou** quando o mercado é resolvido.
+
+Nos capítulos seguintes, você verá:
+
+- como transformar uma notificação em uma operação no Polymarket;  
+- e um módulo breve de **estratégias e gestão de risco**, para usar essas informações de forma responsável e proporcional à sua própria banca.
