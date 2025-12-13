@@ -1,143 +1,105 @@
 ---
 title: 'Como interpretar as Operações'
-description: 'Entenda como ler preços como probabilidades e como isso afeta suas operações.'
+description: 'Entenda a relação entre Preço, Probabilidade e Lucro.'
+icon: 'magnifying-glass-chart'
 ---
 
-No Polymarket, **preço = probabilidade**.  
-Antes de operar, você precisa dominar essa lógica — e este vídeo resume perfeitamente:
+No Polymarket, você não faz "apostas" em uma cartela. Você compra **Ativos Digitais** (Shares) que representam um resultado futuro.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/f0fLy5DhcYY?start=306&end=489&controls=0&modestbranding=1&rel=0&showinfo=0"
-  title="Como interpretar odds no Polymarket"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ borderRadius:'8px', marginBottom:'20px' }}
-/>
+Para operar com lucro, você precisa dominar três conceitos: a **Regra do $1.00**, a **Data de Resolução** e a **Probabilidade Implícita**.
 
----
+## 1. A Regra de Ouro ($1.00)
 
-## O básico: o preço já te diz tudo
+Todo mercado no Polymarket é binário. Ou o evento acontece (**YES**), ou não acontece (**NO**).
 
-Cada share do Polymarket:
-
-- vale **$1.00** se o evento acontecer
-- vale **$0.00** se não acontecer
-
-Então o **preço atual** é a probabilidade implícita.
-
-Exemplo real (simplificado):
-
-- YES a **$0.026** → ~3% de chance  
-- NO a **$0.9712** → ~97% de chance  
+Independentemente do preço que você pagar hoje, o valor final dessa share no futuro será sempre um destes dois:
 
 <CardGroup cols={2}>
-  <Card title="YES barato" icon="arrow-up" color="#3b82f6">
-    Evento improvável  
-    Lucro potencial alto  
-    Risco elevado  
+  <Card title="Vitória (O evento ocorreu)" icon="check" color="#22c55e">
+    Cada share que você possui passará a valer exatamente **$1.00**.
   </Card>
-
-  <Card title="NO caro" icon="arrow-down" color="#ef4444">
-    Evento provável  
-    Lucro pequeno  
-    Risco menor  
+  <Card title="Derrota (O evento não ocorreu)" icon="xmark" color="#ef4444">
+    Cada share que você possui passará a valer **$0.00**.
   </Card>
 </CardGroup>
 
----
-
-## Como o lucro funciona (sem complicação)
-
-Se você compra YES a 2.6¢:
-
-- Seu custo: **$0.026**
-- Se o evento acontecer: vira **$1.00**
-- Lucro por share: **$0.974**
-
-Se você compra NO a 97¢:
-
-- Seu custo: **$0.97**
-- Se o evento não acontecer: vira **$1.00**
-- Lucro por share: **$0.03**
-
-<Note>
-  Quanto menor a probabilidade, maior o retorno do YES e menor o retorno do NO.
-</Note>
+> **O seu lucro é a diferença.**
+> Se você comprou uma share do "YES" a **$0.40** e o evento aconteceu, você recebe **$1.00**. Seu lucro líquido foi de **$0.60** por share (150% de retorno).
 
 ---
 
-## Risco x retorno: enxergue a diferença rapidamente
+## 2. Preço = Probabilidade
 
-| Operação | Investimento | Lucro potencial |
-|---------|--------------|-----------------|
-| YES (evento improvável) | $100 | Muito alto |
-| NO (evento provável) | $100 | Muito baixo |
+Esta é a chave para ler o mercado. O preço da share diz exatamente qual a chance que o mercado está dando para aquele evento.
 
-<Warning>
-  Isso não é “escolher YES ou NO”.  
-  É entender **por que** o mercado paga muito num lado e pouco no outro.
-</Warning>
+* Preço **$0.10** = **10%** de chance.
+* Preço **$0.50** = **50%** de chance.
+* Preço **$0.85** = **85%** de chance.
 
----
-
-## O ponto-chave: você não precisa esperar o resultado
-
-É aqui que o Polymarket se diferencia de apostas tradicionais.
-
-Se o preço subir, **você pode vender antes do evento e realizar lucro**.
-
-Exemplo prático:
-
-- Você compra YES por 2.6¢  
-- Sai uma notícia mudando o cenário  
-- O preço dispara para 40¢, 50¢, 70¢…
-
-Seu lucro vem dessa variação — **não do resultado final**.
-
-<Check>
-  Você está tradando **informação**, não o evento em si.
-</Check>
-
----
-
-## O mercado reage a notícias, não a palpites
-
-Pequenos sinais podem mexer no preço:
-
-- discursos  
-- pesquisas  
-- manchetes  
-- rumores  
-- anúncios econômicos  
-
-Isso é o que gera oportunidade.
-
-<Frame caption="Exemplo: movimento rápido após nova informação">
-  <img src="/images/odds-price-move-example.png" alt="Movimento brusco de preço" />
+<Frame caption="Exemplo visual: O preço da cota reflete a % de chance de vitória.">
+  <img src="/images/price-probability-example.png" alt="Relação Preço e Probabilidade" />
 </Frame>
 
----
+### Como encontrar oportunidades (Value Betting)?
+Você deve comprar quando **a sua análise** discorda do preço do mercado.
 
-## Mentalidade ideal
-
-<Card title="Resumo Essencial" icon="brain" color="#7c3aed">
-  - Preço = probabilidade  
-  - YES barato = evento improvável  
-  - NO caro = evento provável  
-  - Lucro vem da variação, não do fim  
-  - Notícias mudam tudo  
-  - Entre e saia a qualquer momento  
-</Card>
+* **Cenário:** O mercado diz que o Bitcoin tem **30%** de chance de bater $100k (Preço: $0.30).
+* **Sua Análise:** Você acredita que a chance real é de **60%**.
+* **Ação:** Você compra "barato" ($0.30) algo que você acredita valer muito mais. Se o mercado concordar com você depois, o preço subirá.
 
 ---
 
-## Próximo passo
+## 3. Data de Vencimento (Resolution Date)
 
-Agora que você entende como o preço reflete probabilidades e como o mercado reage a informações, vamos para a prática.
+Todo mercado tem um prazo de validade. É fundamental olhar a **data de resolução** antes de entrar.
 
-<Card title="Fazendo sua primeira operação" icon="bolt" href="/learn/how-to-trade">
-  Veja como abrir e fechar posições dentro do Polymarket.
+<Warning>
+  **Por que isso importa?**
+  Se você comprar uma share de um evento que só termina em **Dezembro de 2026**, seu capital poderá ficar "preso" lá até essa data, a menos que você venda para outra pessoa antes.
+</Warning>
+
+* **Mercados de Curto Prazo:** "O preço do ETH sobe hoje?" (Alta volatilidade, resolução rápida).
+* **Mercados de Longo Prazo:** "Quem será o presidente em 2028?" (Capital travado por anos, baixa liquidez imediata).
+
+Sempre verifique as **Rules** (Regras) do mercado clicando na aba de descrição para entender exatamente *como* o vencedor será decidido.
+
+---
+
+## 4. Duas formas de Lucrar
+
+Você não precisa casar com a sua posição. Existem dois caminhos para colocar dinheiro no bolso:
+
+### A. Hold até o Vencimento (Investidor)
+Você compra a share, espera a data do evento chegar e, se estiver certo, troca suas shares por **$1.00** cada.
+* *Risco:* Você precisa acertar o resultado final.
+* *Recompensa:* Retorno máximo ($1.00).
+
+### B. Trading / Venda Antecipada (Especulador)
+Você compra a share barata, espera uma notícia favorável fazer o preço subir e vende para outra pessoa **antes do evento acabar**.
+
+<Tip>
+  **Exemplo de Trading:**
+  1. Você compra "Brasil ganha o jogo" a **$0.40** antes da partida.
+  2. O Brasil faz um gol no primeiro tempo. A probabilidade de vitória sobe.
+  3. O preço da share salta para **$0.75**.
+  4. Você **vende** a $0.75 e garante o lucro, sem correr o risco de o Brasil levar a virada no segundo tempo.
+</Tip>
+
+---
+
+## Resumo
+
+1.  **Compra:** Você adquire shares (Ex: YES ou NO).
+2.  **Custo:** O preço varia de $0.01 a $0.99.
+3.  **Valor:** O preço atual reflete a probabilidade (%) de acontecer.
+4.  **Saída:** Você pode vender a qualquer momento (Trading) ou esperar virar $1.00 (Hold).
+
+---
+
+## Próximo Passo
+
+Agora que você sabe o que está comprando, precisa entender como o preço é formado e como garantir que está pagando o valor justo. Vamos mergulhar no **Order Book** (Livro de Ofertas).
+
+<Card title="Entendendo o Order Book" icon="list-ol" href="/learn/order-book">
+  Aprenda a diferença entre Market Order e Limit Order e economize taxas.
 </Card>
