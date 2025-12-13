@@ -1,20 +1,24 @@
 ---
 title: 'Como depositar USDC'
 description: 'Guia completo para abastecer sua conta via Cartão, Corretora ou Wallet.'
+icon: 'wallet'
 ---
 
 Para operar no Polymarket, você precisa ter saldo em **USDC** na sua conta. O Polymarket utiliza a rede **Polygon**, o que garante transações rápidas e baratas.
 
-<iframe
-  width="100%"
-  height="400"
-  src="https://www.youtube.com/embed/yliCsBpVPuM?controls=0&modestbranding=1&rel=0&showinfo=0"
-  title="Como depositar no Polymarket"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ borderRadius: '8px', marginBottom: '20px' }}
-></iframe>
+<Frame caption="Vídeo Tutorial (Créditos: Canal Bit9 Tutorials)">
+  <iframe
+    width="100%"
+    height="400"
+    src="https://www.youtube.com/embed/yliCsBpVPuM?controls=1&modestbranding=1&rel=0"
+    title="Como depositar no Polymarket"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    style={{ borderRadius: '8px' }}
+  />
+</Frame>
+<Note>Este vídeo é ilustrativo e foi produzido pelo canal **Bit9 Tutorials**. Os direitos pertencem aos criadores.</Note>
 
 ---
 
@@ -25,23 +29,23 @@ Antes de iniciar, é fundamental que você entenda o que está usando. Muitos in
 <Card title="O que é USDC? (USD Coin)" icon="circle-dollar-to-slot" iconType="duotone" color="#2775CA">
   Pense no USDC simplesmente como **Dólar Digital**.
 
-  * **Estabilidade Total:** Diferente do Bitcoin ou Ethereum, que mudam de preço a toda hora, o USDC é uma "Stablecoin" (Moeda Estável).
+  * **Estabilidade Total:** Diferente do Bitcoin ou Ethereum, o USDC é uma "Stablecoin" (Moeda Estável).
   * **A Regra é Clara:** **1 USDC vale sempre $1.00 (Um Dólar Americano).**
   * **Para que serve:** Ele funciona como "fichas" digitais com lastro real. Você usa para entrar nos mercados e, quando sacar, ele continua valendo dólares.
 </Card>
 
-<Note>
+<Warning>
   **Atenção à Rede:** O Polymarket opera exclusivamente na rede **Polygon**.  
   Não envie pela rede Ethereum (ERC20) principal, pois é mais lenta e cara. Na Polygon, as taxas custam centavos.
-</Note>
+</Warning>
 
 ---
 
 ## Escolha seu método de depósito
 
-Selecione a opção abaixo:
+Selecione a opção que melhor se adapta a você:
 
-<Frame caption="Exemplo de tela com os métodos disponíveis para depósito (cartão, corretora e carteira cripto).">
+<Frame caption="Tela de depósito: escolha entre comprar com cartão ou transferir cripto.">
   <img src="/images/deposit-methods-overview.png" alt="Métodos de depósito no Polymarket" />
 </Frame>
 
@@ -54,10 +58,10 @@ Selecione a opção abaixo:
         Na tela de depósito do Polymarket, escolha a opção de compra com cartão (geralmente via parceiro **MoonPay**).
       </Step>
       <Step title="Preencha os dados">
-        Você será redirecionado para a interface segura da MoonPay. Informe quanto você quer depositar (em dólar ou moeda local) e os dados do seu cartão de crédito/débito (Visa ou Mastercard).
+        Você será redirecionado para a interface segura da MoonPay. Informe quanto você quer depositar e os dados do seu cartão de crédito/débito.
       </Step>
       <Step title="Finalize a compra">
-        Siga as instruções de verificação de identidade (se solicitado) e confirme o pagamento. O crédito cairá direto na sua conta do Polymarket já em USDC.
+        Siga as instruções de verificação e confirme o pagamento. O crédito cairá direto na sua conta do Polymarket já em USDC.
       </Step>
     </Steps>
   </Tab>
@@ -72,7 +76,7 @@ Selecione a opção abaixo:
       <Step title="Inicie o saque na corretora">
         Abra sua exchange, certifique-se de que você tem saldo em USDC e vá na opção **Saque / Withdraw**.
       </Step>
-      <Step title="Selecione a rede correta (crítico)">
+      <Step title="Selecione a rede correta (CRÍTICO)">
         Cole o endereço do Polymarket. No campo "Rede" (Network), selecione **Polygon (MATIC)**.
 
         <Warning>
@@ -91,15 +95,14 @@ Selecione a opção abaixo:
 
     <Steps>
       <Step title="Prepare a carteira">
-        Abra sua MetaMask (ou outra wallet compatível). Certifique-se de estar na rede **Polygon Mainnet** e ter saldo em USDC.
+        Abra sua MetaMask (ou outra wallet compatível). Certifique-se de estar na rede **Polygon Mainnet** e ter saldo em USDC e uma pequena quantia de POL (Matic) para taxas de gás (embora o Polymarket subsidie muitas transações, é bom ter).
       </Step>
       <Step title="Envie para o Polymarket">
         Copie seu endereço de depósito no Polymarket e, na wallet, clique em **Send** (Enviar).  
         Cole o endereço, defina o valor em USDC e avance.
       </Step>
       <Step title="Confirme a transação">
-        Confira os primeiros e últimos dígitos do endereço, revise taxas e assine a transação.  
-        Em poucos instantes, o saldo será creditado no Polymarket.
+        Confira os dígitos do endereço e assine a transação.
       </Step>
     </Steps>
   </Tab>
@@ -109,13 +112,13 @@ Selecione a opção abaixo:
 
 ## Verificando o saldo
 
-Após realizar o envio, o tempo de processamento da rede Polygon costuma ser muito rápido (entre 1 e 5 minutos).
+Após realizar o envio, o tempo de processamento da rede Polygon costuma ser rápido (1 a 5 minutos).
 
 1. Volte à sua conta no Polymarket.  
 2. Acesse a área de **Balance** (Saldo) no topo.  
 3. Assim que o valor aparecer, você está pronto para operar.
 
-<Frame caption="Saldo em USDC atualizado e disponível para operar.">
+<Frame caption="Seu saldo em USDC estará visível no topo da página.">
   <img src="/images/balance-updated.png" alt="Saldo USDC disponível no Polymarket" />
 </Frame>
 
@@ -123,12 +126,12 @@ Após realizar o envio, o tempo de processamento da rede Polygon costuma ser mui
 
 ## Evitando problemas
 
-<Check>
-  **Dica de ouro:** Se for seu primeiro depósito via corretora ou carteira, faça um **envio de teste** com um valor pequeno (por exemplo, $5). Só envie o montante total depois de confirmar que o teste funcionou.
-</Check>
+<Tip>
+  **Dica de Ouro:** Se for seu primeiro depósito via corretora ou carteira, faça um **envio de teste** com um valor pequeno (ex: $5). Só envie o montante total depois de confirmar que o teste chegou corretamente.
+</Tip>
 
-- **Saldo não caiu?** Verifique o status na origem (corretora / MoonPay / wallet).  
-- **Rede errada?** Se enviou por engano via outra rede (como Ethereum), os fundos não aparecerão automaticamente. Nesse caso, será necessário suporte especializado.
+* **Saldo não caiu?** Verifique o status na origem (corretora / MoonPay / wallet).
+* **Rede errada?** Se enviou por engano via outra rede (como Ethereum), os fundos não aparecerão automaticamente. Entre em contato com o suporte ou use uma ponte (Bridge), mas isso exige conhecimento técnico avançado.
 
 ---
 
