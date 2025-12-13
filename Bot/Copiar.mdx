@@ -1,65 +1,79 @@
 ---
 title: 'Como Copiar uma Operação'
-description: 'Do alerta à execução: como agir rápido e com segurança.'
+description: 'Guia passo a passo para executar os sinais do PolyTracker na Polymarket.'
+icon: 'copy'
 ---
 
-Receber a notificação no seu celular é apenas metade do processo. A outra metade é a execução.
+Recebeu um alerta? Ótimo. Agora é hora de avaliar e executar.
 
-O PolyTracker não opera por você automaticamente. Nós entregamos a inteligência, e você aperta o botão. Abaixo, detalhamos o fluxo ideal para transformar um alerta em uma operação bem-sucedida.
+Lembre-se: oportunidades não surgem apenas quando uma baleia entra pela primeira vez em um mercado (`New Position`). Muitas vezes, o sinal de que ela está aumentando a aposta (`Buy`) em uma posição existente é um indicador de convicção ainda mais forte.
 
----
+<Warning>
+  **Atenção:** O PolyTracker é uma ferramenta de **monitoramento**. A execução da ordem na Polymarket é feita manualmente por você. Isso garante que você tenha o controle final sobre seu dinheiro.
+</Warning>
 
-## 1. O Fluxo de Decisão
+## Passo a Passo da Execução
 
-Ao receber um alerta (ex: `New Position`), siga este checklist mental rápido antes de abrir sua carteira:
+Siga este fluxo para replicar a operação com segurança, seja ela uma nova aposta ou um aumento de posição.
 
 <Steps>
-  <Step title="Analise a Convicção (% Portfolio)">
-    Este é o dado mais importante do alerta. Olhe para o campo `(% Portfolio)`.
+  <Step title="Identifique o Sinal no Telegram">
+    Ao receber a notificação, identifique primeiro o tipo de movimento. O bot pode sinalizar uma **Nova Posição** ou uma **Compra** (aumento de posição).
     
-    * **0.1% a 1%:** Pode ser apenas um teste, uma aposta recreativa ou "hedge" (proteção).
-    * **3% a 5%:** Posição relevante. O investidor tem uma tese sólida.
-    * **10% ou mais:** "High Conviction". O investidor está extremamente confiante (ou é imprudente).
+    Analise as informações chave na imagem/mensagem:
+    1. **O Mercado:** Qual é a pergunta? (Ex: "Bitcoin hit $100k?")
+    2. **O Lado (Side):** A baleia está comprando **YES** ou **NO**?
+    3. **Preço Médio:** A que preço ela está pagando agora?
+    4. **Porcentagem (%):** Quanto do patrimônio da baleia foi usado nessa entrada? (Isso indica o nível de **convicção** dela).
 
-    <Frame caption="Destaque para a porcentagem do portfólio no alerta">
-      <img src="/images/notif-highlight-portfolio.png" alt="Destaque Porcentagem" />
-    </Frame>
+    <img
+      className="block dark:hidden"
+      src="/images/exemplo-alerta-light.png"
+      alt="Exemplo de Alerta do PolyTracker no Telegram"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/exemplo-alerta-dark.png"
+      alt="Exemplo de Alerta do PolyTracker no Telegram"
+    />
+    
+    <Note>
+      **Dica:** Um sinal de `Buy` (Recompra/Aumento) indica que a baleia continua confiante na tese. Da mesma forma, uma % alta do portfólio sugere uma "aposta forte", enquanto uma % baixa pode ser apenas um teste.
+    </Note>
   </Step>
 
-  <Step title="Acesse o Mercado">
-    Se a oportunidade parecer boa, não perca tempo procurando manualmente.
-    
-    No próprio balão da notificação do bot, clique no link azul **Market** (ou no nome do evento). Isso abrirá a página exata do evento no site do Polymarket.
+  <Step title="Acesse o Link do Mercado">
+    Clique no **Link para o Mercado** fornecido junto com o alerta. Isso abrirá a página exata do evento na Polymarket, garantindo que você não entre em um mercado errado ou duplicado.
   </Step>
 
-  <Step title="Cheque o Preço (Slippage)">
-    Verifique o preço atual no site em comparação ao `Avg Price` que o bot informou.
+  <Step title="Compare o Preço (Spread)">
+    Antes de confirmar, olhe o preço atual da cota (*share price*):
     
-    * **Preço próximo?** A oportunidade ainda existe.
-    * **Preço disparou?** Se a baleia pagou 30¢ e agora já está 50¢, o risco/retorno mudou. Avalie se ainda vale a pena entrar.
+    * **Cenário Ideal:** O preço está próximo ou abaixo do que a baleia pagou.
+    * **Cenário de Atenção:** O preço disparou logo após o alerta. Avalie se o risco-retorno ainda compensa ou se vale a pena esperar um leve recuo.
+  </Step>
+
+  <Step title="Configure sua Ordem">
+    Na interface da Polymarket (painel à direita):
+    
+    1.  Certifique-se de que a aba **Buy** está selecionada.
+    2.  Escolha o desfecho correto (**YES** ou **NO**) conforme o alerta.
+    3.  Digite o valor da sua entrada.
+    
+    <Warning>
+      **Não copie o valor absoluto da baleia!**
+      
+      Se a baleia entrou com $5.000, isso pode ser apenas 1% do banco dela. Respeite a **sua** realidade financeira. Leve em conta a porcentagem do patrimônio que discutiremos no capítulo de **Estratégias e Gestão de Risco**.
+    </Warning>
+    
+    <img src="/images/interface-polymarket-compra.png" alt="Interface de Compra na Polymarket" />
+  </Step>
+
+  <Step title="Confirme a Transação">
+    Clique em **Buy** e confirme sua operação. Pronto, você está posicionado junto com a Smart Wallet.
   </Step>
 </Steps>
 
----
+## Monitoramento
 
-## 2. A Regra de Ouro: Replicação Proporcional
-
-O erro número 1 de quem começa a copiar traders é tentar replicar os **valores absolutos**.
-
-Você não deve olhar para a quantidade de Shares ou para o valor em Dólares, mas sim para a **proporção**.
-
-<Warning>
-  **Não copie o valor financeiro. Copie a lógica.**
-</Warning>
-
-Se você tem uma banca de $1.000 e está seguindo uma "Baleia" com $100.000, a matemática deve ser:
-
-| Ação da Baleia | Sua Ação (Exemplo) |
-| :--- | :--- |
-| Entrou com **$3.000** | Isso é **3%** da banca dela. |
-| **Sua Execução** | Você deve entrar com **$30** (3% da sua banca). |
-
-**Por que isso é importante?**
-O investidor grande pode perder $3.000 em uma aposta de teste e continuar tranquilo. Para você, tentar copiar os mesmos $3.000 pode significar quebrar sua banca inteira em um único erro.
-
-Respeite a sua realidade financeira. O objetivo é crescer seu patrimônio em porcentagem, seguindo a inteligência dos grandes.
+O jogo não acaba na compra. Use o **PolyTracker Bot** para acompanhar os próximos passos dessa carteira. Se ela vender (`Sell` ou `Close Position`), você receberá um novo alerta e poderá decidir se realiza o lucro também.
