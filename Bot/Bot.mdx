@@ -23,7 +23,7 @@ This is done securely using a **VPN**. We recommend two options that allow you t
 <CardGroup cols={2}>
   <Card title="VPN Super Unlimited (Free)" icon="mobile" href="https://apps.apple.com/us/app/vpn-super-unlimited-proxy/id1370293473">
     **Best Free Option for Mobile.**
-    - Allows you to select specific countries (e.g., Canada, Singapore).
+    - Allows you to select specific countries manually.
     - Ad-supported but free.
     - Available on iOS and Android.
   </Card>
@@ -49,7 +49,7 @@ Select your device to see how to configure your access.
     Go to your app store and search for **"VPN Super Unlimited Proxy"** (blue key icon).
     
     * **iOS:** [Download on App Store](https://apps.apple.com/us/app/vpn-super-unlimited-proxy/id1370293473)
-    * **Android:** Search in Google Play Store.
+    * **Android:** [Download on Play Store](https://play.google.com/store/apps/details?id=com.free.vpn.super.hotspot.open&hl=en)
 
     ### 2. Connect
     
@@ -57,16 +57,28 @@ Select your device to see how to configure your access.
       <Step title="Open the App">
         Launch the app. You might see an ad (close it to proceed to the free version).
       </Step>
-      <Step title="Select Location (Crucial)">
-        Do **NOT** click the big "Connect" button immediately (it might connect you to a random location).
+      <Step title="Select Location">
+        Tap the location menu (flag icon or server list) to choose manually.
         
-        Look for the **"Fastest Location"** or flag icon list. Tap it and manually select a supported country like **Canada**, **United Kingdom**, or **Germany**.
+        **Recommended Locations:**
+        1. 🇨🇦 **Canada** (*Important: Avoid servers in **Ontario**. If the connection fails, try Montreal or Vancouver*).
+        2. 🇲🇽 **Mexico**
+        3. 🇯🇵 **Japan**
       </Step>
-      <Step title="Connect">
-        Once the country is selected, toggle the connect switch. Wait for the "Connected" status.
+      <Step title="Watch the Tutorial">
+        See exactly how to select the location and connect in the video below:
+
+        <Frame>
+          {/* SUBSTITUA O LINK ABAIXO PELO CAMINHO DO SEU VÍDEO (ex: /videos/tutorial.mp4) OU LINK DO YOUTUBE */}
+          <video
+            controls
+            className="w-full aspect-video"
+            src="LINK_DO_SEU_VIDEO_AQUI.mp4"
+          />
+        </Frame>
       </Step>
       <Step title="Access Polymarket">
-        Open your mobile browser (Safari/Chrome), go to Polymarket, and the interface should load without restrictions.
+        Once the "VPN" icon appears in your status bar, open your mobile browser (Safari/Chrome) and go to Polymarket.
       </Step>
     </Steps>
   </Tab>
@@ -75,7 +87,7 @@ Select your device to see how to configure your access.
     For desktop users, we recommend using a Browser Extension for quick access.
 
     ### Options
-    * **Free:** **Urban VPN** (Browser Extension). It allows you to pick a country for free.
+    * **Free:** **Urban VPN** (Browser Extension).
     * **Paid:** **NordVPN** (Desktop App).
 
     <Steps>
@@ -83,11 +95,14 @@ Select your device to see how to configure your access.
         Download your chosen VPN software.
       </Step>
       <Step title="Select a Supported Region">
-        Open the VPN interface.
+        Open the VPN interface and select a location where Polymarket is active.
         
-        <Warning>
-          **Important:** Ensure you select a location where Polymarket is active (e.g., **Canada**, **Mexico**, or **Japan**). Do not use a US server.
-        </Warning>
+        <Tip>
+          **Priority List:**
+          1. **Canada** (excluding Ontario)
+          2. **Mexico**
+          3. **Japan**
+        </Tip>
       </Step>
       <Step title="Refresh the Page">
         With the secure connection active, refresh your browser. The restriction warning should disappear.
@@ -103,10 +118,16 @@ Select your device to see how to configure your access.
 <AccordionGroup>
   <Accordion title="It's still restricted even with connection active">
     1. **Clear Cache:** Your browser might remember your previous location. Clear your cache/cookies or try opening an **Incognito/Private** window.
-    2. **Change Server:** Disconnect and try a different country (e.g., if Canada fails, try United Kingdom).
+    2. **Check the Region:** If you selected "Canada" and it didn't work, you might be connected to a Toronto server (Ontario). Try switching to **Mexico**.
   </Accordion>
 
   <Accordion title="Internet is slow">
     Free VPNs can get congested due to high traffic. If speed is critical for your trading (sniping), consider upgrading to a paid plan like NordVPN for better latency.
+  </Accordion>
+
+  <Accordion title="Need help? Contact Support">
+    If you are having trouble setting up your access, please reach out to our team. We are ready to assist you.
+    
+    📧 **supportpolytracker@gmail.com**
   </Accordion>
 </AccordionGroup>
